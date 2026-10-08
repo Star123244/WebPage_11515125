@@ -1,450 +1,2618 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="藍天咖啡，為手沖咖啡愛好者挑選當季精品咖啡豆，讓每一杯都清澈、明亮、值得細品。">
-  <title>藍天咖啡｜讓風味，慢慢抵達</title>
+  <meta name="description" content="台灣傳統名茶——凍頂烏龍茶專題。探尋南投鹿谷凍頂山風土傳奇、林鳳池舉人茶苗歷史、澄澈琥珀金黃茶色、專業品鑑之道與傳統炭焙沖泡特色。">
+  <title>凍頂烏龍茶｜山嵐凝韻 ‧ 琥珀醇香</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #062742;
-      --blue: #0c5b95;
-      --sky: #75c6e8;
-      --mist: #eaf5f7;
-      --cream: #fbfaf6;
-      --ink: #122534;
-      --muted: #607482;
-      --line: #d7e4e8;
-      --sand: #e5b66b;
-      --shadow: 0 18px 50px rgba(6, 39, 66, .13);
+      /* 品牌核心顏色：淺綠、琥珀色、墨綠 */
+      --green-dark: #163b27;         /* 墨綠：深沉穩重、山林幽靜 */
+      --green-forest: #1e4d34;       /* 墨綠偏林：主色調 */
+      --green-medium: #3b7654;       /* 中墨綠：段落與強調 */
+      --green-light: #7da876;        /* 淺綠：清新自然、茶芽生機 */
+      --green-soft: #a8cca2;         /* 柔和淺綠：邊框與高光 */
+      --green-mist: #eef6ec;         /* 淺綠霧白：柔和背景 */
+      --green-tint: #f6fbf5;         /* 極淡淺綠基底 */
+
+      --amber-dark: #a26b1c;         /* 深琥珀：熟成焙火色 */
+      --amber-primary: #c8872b;      /* 琥珀色：茶湯靈魂色澤 */
+      --amber-gold: #df9e38;         /* 琥珀金：溫暖金光 */
+      --amber-light: #f5cf7b;        /* 淺金琥珀：亮點點綴 */
+      --amber-mist: #fdf6e7;         /* 琥珀霧金：背景柔光 */
+
+      /* 中性與字體色 */
+      --text-main: #14271c;          /* 墨綠深灰文字 */
+      --text-muted: #53695b;         /* 沉穩次文字 */
+      --text-light: #7b9483;         /* 輔助標註色 */
+      --border-color: #d7e6da;       /* 柔和葉綠邊框 */
+      --surface-white: #ffffff;      /* 純白卡片 */
+
+      /* 陰影與圓角 */
+      --shadow-sm: 0 4px 14px rgba(22, 59, 39, 0.05);
+      --shadow-md: 0 10px 30px rgba(22, 59, 39, 0.08);
+      --shadow-lg: 0 20px 52px rgba(22, 59, 39, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 26px;
+      --radius-full: 9999px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      color: var(--ink);
-      background: var(--cream);
-      font: 16px/1.7 "Noto Sans TC", sans-serif;
-      -webkit-font-smoothing: antialiased;
+      padding: 0;
     }
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button { cursor: pointer; }
-    .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--green-tint);
+      color: var(--text-main);
+      font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      transition: all 0.25s ease;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .serif {
+      font-family: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+    }
+
+    /* 眉標與章節標題 */
     .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green-forest);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 22px;
+      height: 1.5px;
+      background: var(--green-light);
+    }
+
+    .eyebrow-left::after {
+      display: none;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.8vw, 42px);
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+    }
+
+    .section-title em {
+      color: var(--amber-primary);
+      font-style: normal;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* 按鈕元件 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-forest {
+      background: linear-gradient(135deg, var(--green-forest) 0%, var(--green-dark) 100%);
+      color: #ffffff;
+    }
+
+    .btn-forest:hover {
+      background: linear-gradient(135deg, var(--green-medium) 0%, var(--green-forest) 100%);
+    }
+
+    .btn-amber {
+      background: linear-gradient(135deg, var(--amber-gold) 0%, var(--amber-primary) 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(200, 135, 43, 0.3);
+    }
+
+    .btn-amber:hover {
+      background: linear-gradient(135deg, var(--amber-primary) 0%, var(--amber-dark) 100%);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--green-light);
+      color: var(--green-forest);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline:hover {
+      background: var(--green-forest);
+      color: #ffffff;
+      border-color: var(--green-forest);
+    }
+
+    /* ========================================================
+       導覽列 (Navbar)
+       ======================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246, 251, 245, 0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(215, 230, 218, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .brand-logo {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin: 0 0 18px;
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .18em;
     }
-    .eyebrow::before { width: 28px; height: 1px; background: currentColor; content: ""; }
-    .section-title {
-      margin: 0;
-      font: 800 clamp(30px, 4vw, 46px)/1.28 "Noto Serif TC", serif;
-      letter-spacing: .045em;
-    }
-    .text-blue { color: var(--blue); }
-    .button, .outline-link {
-      display: inline-flex;
-      min-height: 50px;
+
+    .brand-symbol {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-forest) 60%, var(--green-light) 100%);
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 23px;
-      border: 1px solid transparent;
-      border-radius: 2px;
-      font-size: 14px;
+      color: var(--amber-light);
+      box-shadow: 0 4px 14px rgba(22, 59, 39, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: clamp(17px, 2vw, 21px);
       font-weight: 700;
-      letter-spacing: .04em;
-      transition: transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
+      color: var(--green-dark);
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      white-space: nowrap;
     }
-    .button:hover, .outline-link:hover { transform: translateY(-2px); }
-    .button--sand { color: var(--navy); background: var(--sand); }
-    .button--sand:hover { background: #f1cb8b; }
-    .button--dark { color: var(--navy); background: #fff; }
-    .outline-link { border-color: rgba(255,255,255,.72); color: #fff; }
-    .outline-link:hover { color: var(--navy); background: #fff; }
-    :focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
 
-    /* Header & hero */
-    .site-header { position: absolute; z-index: 20; top: 0; left: 0; width: 100%; border-bottom: 1px solid rgba(255,255,255,.28); }
-    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 11px; color: #fff; }
-    .brand-mark { width: 29px; height: 29px; display: grid; place-items: center; border: 1px solid var(--sky); border-radius: 50%; color: var(--sky); font: 700 16px/1 "Playfair Display", serif; }
-    .brand-copy { display: grid; line-height: 1.05; }
-    .brand-copy strong { font-size: 13px; letter-spacing: .08em; }
-    .brand-copy small { margin-top: 4px; font-size: 8px; letter-spacing: .18em; opacity: .7; }
-    .nav-links { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 31px); }
-    .nav-links a { position: relative; color: #fff; font-size: 13px; font-weight: 500; white-space: nowrap; }
-    .nav-links a:not(.nav-cta)::after { position: absolute; right: 0; bottom: -5px; left: auto; width: 0; height: 1px; background: var(--sky); content: ""; transition: width .25s ease; }
-    .nav-links a:not(.nav-cta):hover::after { right: auto; left: 0; width: 100%; }
-    .nav-links .nav-cta { padding: 8px 13px; border: 1px solid rgba(255,255,255,.72); }
-    .nav-links .nav-cta:hover { color: var(--navy); background: #fff; }
-    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.7); color: #fff; background: transparent; font-size: 23px; line-height: 1; }
-
-    .hero { position: relative; min-height: 704px; overflow: hidden; color: #fff; background: var(--navy); isolation: isolate; }
-    .hero::before { position: absolute; z-index: -2; top: -320px; right: -210px; width: 810px; height: 810px; border-radius: 50%; background: radial-gradient(circle, rgba(117,198,232,.38), rgba(12,91,149,.18) 38%, transparent 69%); content: ""; }
-    .hero::after { position: absolute; z-index: -1; right: 12%; bottom: -430px; width: 780px; height: 780px; border: 1px solid rgba(117,198,232,.18); border-radius: 50%; box-shadow: 0 0 0 65px rgba(117,198,232,.035), 0 0 0 154px rgba(117,198,232,.025); content: ""; }
-    .hero-grid { min-height: 704px; display: grid; grid-template-columns: 1.02fr .98fr; gap: 45px; align-items: center; padding: 122px 0 72px; }
-    .hero-copy { position: relative; z-index: 2; }
-    .hero .eyebrow { color: var(--sky); }
-    .hero h1 { max-width: 650px; margin: 0 0 23px; font: 800 clamp(42px, 5.5vw, 68px)/1.22 "Noto Serif TC", serif; letter-spacing: .05em; }
-    .hero h1 span { color: var(--sky); }
-    .hero-lede { max-width: 500px; margin: 0; color: rgba(255,255,255,.79); font-size: 16px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
-    .hero-note { margin: 31px 0 0; color: rgba(255,255,255,.55); font: 600 11px/1.5 "Playfair Display", serif; letter-spacing: .16em; }
-    .scroll-cue { position: absolute; bottom: 35px; left: 0; display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.63); font-size: 10px; font-weight: 600; letter-spacing: .18em; }
-    .scroll-cue::before { width: 38px; height: 1px; background: var(--sky); content: ""; }
-
-    .hero-art { position: relative; align-self: stretch; min-height: 470px; overflow: hidden; }
-    .hero-art .sun { position: absolute; top: 52px; right: 54px; width: clamp(138px, 18vw, 200px); aspect-ratio: 1; border-radius: 50%; background: #b9e8f5; box-shadow: 0 0 0 27px rgba(117,198,232,.09), 0 0 0 59px rgba(117,198,232,.045); }
-    .mountain { position: absolute; right: -11%; bottom: 6px; width: 116%; height: 260px; transform: skewY(-9deg); transform-origin: right bottom; background: linear-gradient(146deg, transparent 0 27%, rgba(61,145,184,.36) 27.3% 48%, rgba(17,97,143,.77) 48.3%); clip-path: polygon(0 62%, 28% 20%, 44% 57%, 68% 4%, 100% 57%, 100% 100%, 0 100%); }
-    .mountain--back { right: 13%; bottom: 98px; width: 108%; height: 220px; opacity: .46; transform: skewY(-4deg); background: #2a81ae; clip-path: polygon(0 84%, 31% 30%, 45% 62%, 66% 9%, 100% 66%, 100% 100%, 0 100%); }
-    .horizon { position: absolute; right: -4%; bottom: 0; width: 116%; height: 112px; background: linear-gradient(90deg, rgba(7,45,75,.5), #0d5684); transform: skewY(-4deg); }
-    .coffee-vessel { position: absolute; z-index: 4; right: 18%; bottom: 36px; width: 192px; height: 274px; filter: drop-shadow(18px 22px 14px rgba(0,0,0,.22)); }
-    .vessel-neck { position: absolute; top: 0; left: 62px; width: 68px; height: 42px; border: 7px solid #b3e2ef; border-bottom: 0; border-radius: 50% 50% 0 0; background: rgba(6,39,66,.62); }
-    .vessel-body { position: absolute; top: 33px; left: 18px; width: 150px; height: 212px; border: 7px solid #b3e2ef; border-radius: 31% 31% 42% 42% / 12% 12% 37% 37%; background: linear-gradient(90deg, rgba(30,112,151,.9), rgba(5,35,60,.9) 45%, rgba(83,167,198,.8)); overflow: hidden; }
-    .vessel-body::before { position: absolute; top: 15px; left: 0; width: 100%; height: 5px; background: rgba(197,237,244,.8); box-shadow: 0 48px rgba(197,237,244,.25), 0 95px rgba(197,237,244,.18), 0 145px rgba(197,237,244,.13); content: ""; }
-    .vessel-body::after { position: absolute; top: 5px; left: 48%; width: 24px; height: 200px; border-radius: 50%; background: rgba(218,247,251,.17); content: ""; }
-    .vessel-handle { position: absolute; right: 0; bottom: 49px; width: 62px; height: 98px; border: 10px solid #a9dce9; border-left: 0; border-radius: 0 53px 53px 0; }
-    .art-label { position: absolute; z-index: 5; right: 0; bottom: 64px; display: grid; gap: 3px; color: rgba(255,255,255,.73); font-size: 11px; letter-spacing: .1em; text-align: right; }
-    .art-label strong { color: var(--sky); font: 700 22px/1 "Playfair Display", serif; }
-
-    /* Story */
-    .story { padding: 118px 0; background: #fff; }
-    .story-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(45px, 8vw, 105px); align-items: center; }
-    .story-visual { position: relative; min-height: 416px; }
-    .seal { position: absolute; top: 0; left: 0; width: 310px; height: 310px; display: grid; place-items: center; border: 1px solid #a8d2df; border-radius: 50%; color: var(--blue); background: radial-gradient(circle at 35% 30%, #fff 0, #eaf6f8 68%, #d9edf1 100%); }
-    .seal::before, .seal::after { position: absolute; border: 1px solid rgba(12,91,149,.25); border-radius: 50%; content: ""; }
-    .seal::before { inset: 17px; }
-    .seal::after { inset: 44px; border-style: dashed; }
-    .seal-inner { position: relative; z-index: 1; display: grid; gap: 7px; text-align: center; }
-    .seal-inner b { font: 700 42px/1 "Playfair Display", serif; }
-    .seal-inner span { font-size: 13px; font-weight: 700; letter-spacing: .1em; }
-    .seal-inner small { font: 600 9px/1.5 "Playfair Display", serif; letter-spacing: .15em; }
-    .blue-note { position: absolute; right: 0; bottom: 0; width: 235px; padding: 27px 28px; color: #fff; background: var(--navy); box-shadow: var(--shadow); }
-    .blue-note .eyebrow { margin-bottom: 9px; color: var(--sky); font-size: 9px; }
-    .blue-note p { margin: 0; font: 700 20px/1.55 "Noto Serif TC", serif; letter-spacing: .05em; }
-    .story-copy p { margin: 19px 0 0; color: var(--muted); }
-    .inline-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding-bottom: 5px; border-bottom: 1px solid var(--blue); color: var(--blue); font-weight: 700; }
-    .inline-link:hover { color: var(--navy); }
-
-    /* Coffee collection */
-    .coffee { padding: 111px 0 120px; background: var(--mist); }
-    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 39px; }
-    .section-heading p { max-width: 370px; margin: 0; color: var(--muted); }
-    .coffee-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
-    .coffee-card { position: relative; min-height: 384px; display: flex; flex-direction: column; overflow: hidden; padding: 30px; color: #fff; background: var(--navy); box-shadow: var(--shadow); }
-    .coffee-card:nth-child(2) { background: #106396; }
-    .coffee-card:nth-child(3) { background: #164c68; }
-    .coffee-card::after { position: absolute; right: -90px; bottom: -90px; width: 260px; height: 260px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; box-shadow: 0 0 0 27px rgba(255,255,255,.045), 0 0 0 65px rgba(255,255,255,.025); content: ""; }
-    .card-top, .coffee-card h3, .flavour, .card-footer { position: relative; z-index: 1; }
-    .card-top { color: var(--sky); font: 700 12px/1.3 "Playfair Display", serif; letter-spacing: .12em; }
-    .origin { margin: 25px 0 8px; color: rgba(255,255,255,.69); font-size: 10px; font-weight: 700; letter-spacing: .15em; }
-    .coffee-card h3 { margin: 0; font: 700 26px/1.38 "Noto Serif TC", serif; letter-spacing: .04em; }
-    .flavour { margin: 15px 0 0; color: rgba(255,255,255,.73); font-size: 14px; }
-    .card-footer { display: flex; align-items: end; justify-content: space-between; gap: 14px; margin-top: auto; }
-    .price { font: 700 15px/1.3 "Playfair Display", serif; letter-spacing: .04em; }
-    .save-coffee { padding: 0 0 5px; border: 0; border-bottom: 1px solid rgba(255,255,255,.72); color: #fff; background: transparent; font-size: 13px; font-weight: 700; white-space: nowrap; transition: color .2s, border-color .2s; }
-    .save-coffee:hover { border-color: var(--sand); color: var(--sand); }
-
-    /* Brew */
-    .brew { padding: 118px 0; background: #fff; }
-    .brew-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: clamp(42px, 8vw, 90px); align-items: center; }
-    .brew-art { position: relative; height: 414px; overflow: hidden; background: linear-gradient(136deg, #e3f4f7 0 48%, #f8fcfc 48% 100%); }
-    .brew-art::before { position: absolute; top: 37px; left: 35px; width: 68px; height: 41px; border-top: 1px solid #6cb4ce; border-bottom: 1px solid #6cb4ce; content: ""; }
-    .brew-art::after { position: absolute; top: 57px; left: 35px; width: 43px; border-top: 1px solid #6cb4ce; content: ""; }
-    .water-rings { position: absolute; top: 67px; left: 50%; width: 245px; height: 245px; border: 1px solid rgba(12,91,149,.27); border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 0 30px rgba(117,198,232,.12), 0 0 0 74px rgba(117,198,232,.065); }
-    .water-rings::before { position: absolute; top: 18px; left: 50%; width: 1px; height: 58px; background: #6bb8d1; content: ""; transform: translateX(-50%); }
-    .dripper { position: absolute; z-index: 2; top: 134px; left: 50%; width: 147px; height: 151px; border: 7px solid var(--blue); border-top: 0; background: linear-gradient(130deg, rgba(255,255,255,.85), rgba(117,198,232,.25)); clip-path: polygon(0 0, 100% 0, 74% 100%, 26% 100%); transform: translateX(-50%); }
-    .dripper::after { position: absolute; right: 32px; bottom: 19px; left: 32px; height: 33px; border-top: 2px solid rgba(12,91,149,.55); border-bottom: 2px solid rgba(12,91,149,.35); content: ""; }
-    .carafe { position: absolute; z-index: 1; bottom: 56px; left: 50%; width: 139px; height: 106px; border: 6px solid var(--blue); border-radius: 16px 16px 45% 45%; background: rgba(117,198,232,.23); transform: translateX(-50%); }
-    .carafe::before { position: absolute; top: -28px; left: 29px; width: 70px; height: 28px; border: 6px solid var(--blue); border-bottom: 0; border-radius: 50% 50% 0 0; content: ""; }
-    .brew-caption { position: absolute; right: 24px; bottom: 19px; color: var(--blue); text-align: right; }
-    .brew-caption span { display: block; font: 700 11px/1.5 "Playfair Display", serif; letter-spacing: .12em; }
-    .brew-caption strong { font: 700 24px/1.1 "Playfair Display", serif; }
-    .brew-copy > p { margin: 18px 0 25px; color: var(--muted); }
-    .brew-steps { border-top: 1px solid var(--line); }
-    .brew-step { display: grid; grid-template-columns: 52px 1fr; gap: 15px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-    .step-number { color: var(--blue); font: 700 24px/1 "Playfair Display", serif; }
-    .brew-step h3 { margin: 0; font: 700 16px/1.5 "Noto Serif TC", serif; }
-    .brew-step p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
-
-    /* Subscribe and footer */
-    .visit { position: relative; overflow: hidden; padding: 108px 0 113px; color: #fff; text-align: center; background: var(--navy); }
-    .visit::before, .visit::after { position: absolute; width: 390px; height: 390px; border: 1px solid rgba(117,198,232,.17); border-radius: 50%; content: ""; }
-    .visit::before { top: -245px; left: -153px; box-shadow: 0 0 0 45px rgba(117,198,232,.035); }
-    .visit::after { right: -170px; bottom: -260px; box-shadow: 0 0 0 50px rgba(117,198,232,.035); }
-    .visit .wrap { position: relative; z-index: 1; max-width: 715px; }
-    .visit .eyebrow { justify-content: center; color: var(--sky); }
-    .visit h2 { margin: 0; font: 800 clamp(30px, 4vw, 46px)/1.3 "Noto Serif TC", serif; letter-spacing: .045em; }
-    .visit p { max-width: 510px; margin: 19px auto 29px; color: rgba(255,255,255,.72); }
-    .subscribe-form { display: flex; min-height: 58px; border: 1px solid rgba(255,255,255,.62); }
-    .subscribe-form input { min-width: 0; flex: 1; padding: 0 18px; border: 0; color: #fff; outline: none; background: transparent; }
-    .subscribe-form input::placeholder { color: rgba(255,255,255,.56); }
-    .subscribe-form button { padding: 0 23px; border: 0; color: var(--navy); background: var(--sand); font-size: 14px; font-weight: 700; white-space: nowrap; transition: background .2s; }
-    .subscribe-form button:hover { background: #f1cb8b; }
-    .site-footer { padding: 66px 0 23px; color: rgba(255,255,255,.68); background: #031c31; }
-    .footer-grid { display: grid; grid-template-columns: 1.45fr .8fr 1fr; gap: 55px; padding-bottom: 48px; }
-    .footer-brand .brand { margin-bottom: 16px; }
-    .footer-brand p { max-width: 330px; margin: 0; font-size: 14px; }
-    .footer-title { margin: 0 0 14px; color: var(--sky); font-size: 11px; font-weight: 700; letter-spacing: .18em; }
-    .footer-links { display: grid; gap: 8px; font-size: 14px; }
-    .footer-links a:hover { color: var(--sky); }
-    .footer-links address { font-style: normal; }
-    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.17); color: rgba(255,255,255,.44); font: 600 10px/1.5 "Playfair Display", serif; letter-spacing: .1em; }
-
-    .toast { position: fixed; z-index: 50; right: 22px; bottom: 22px; max-width: min(370px, calc(100vw - 44px)); padding: 14px 18px; border-left: 3px solid var(--sand); color: #fff; background: var(--navy); box-shadow: var(--shadow); font-size: 14px; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .25s ease, transform .25s ease; }
-    .toast.show { opacity: 1; transform: translateY(0); }
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 820px) {
-      .menu-toggle { display: grid; place-items: center; }
-      .nav { position: relative; }
-      .nav-links { position: absolute; top: 78px; right: -24px; left: -24px; max-height: 0; display: grid; gap: 0; overflow: hidden; background: #05233c; transition: max-height .35s ease; }
-      .nav-links.open { max-height: 300px; border-top: 1px solid rgba(255,255,255,.16); }
-      .nav-links a { display: block; padding: 13px 24px; }
-      .nav-links .nav-cta { margin: 5px 24px 15px; padding: 10px 13px; text-align: center; }
-      .hero { min-height: 710px; }
-      .hero-grid { min-height: 710px; grid-template-columns: 1fr; gap: 0; padding: 118px 0 43px; }
-      .hero-art { min-height: 276px; margin-top: -9px; }
-      .hero-art .sun { top: 19px; right: 20%; width: 130px; }
-      .mountain { height: 180px; }
-      .mountain--back { bottom: 69px; height: 150px; }
-      .coffee-vessel { right: 17%; bottom: -12px; transform: scale(.72); transform-origin: bottom right; }
-      .art-label { display: none; }
-      .scroll-cue { display: none; }
-      .story-grid, .brew-grid { grid-template-columns: 1fr; }
-      .story-visual { max-width: 525px; width: 100%; min-height: 400px; }
-      .coffee-grid { grid-template-columns: repeat(2, 1fr); }
-      .coffee-card:nth-child(3) { grid-column: span 2; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-brand { grid-column: 1 / -1; }
+    .brand-text span {
+      font-size: 9.5px;
+      font-weight: 600;
+      color: var(--amber-primary);
+      letter-spacing: 0.18em;
+      display: block;
     }
-    @media (max-width: 560px) {
-      .wrap { width: calc(100% - 34px); }
-      .nav-links { right: -17px; left: -17px; }
-      .hero { min-height: 680px; }
-      .hero-grid { min-height: 680px; padding-top: 106px; }
-      .hero h1 { font-size: 40px; }
-      .hero-lede { font-size: 14px; }
-      .hero-actions { gap: 9px; margin-top: 24px; }
-      .hero-actions .button, .hero-actions .outline-link { min-height: 46px; padding: 8px 15px; font-size: 13px; }
-      .hero-note { margin-top: 21px; }
-      .hero-art { min-height: 219px; }
-      .hero-art .sun { width: 92px; }
-      .coffee-vessel { right: 5%; bottom: -48px; transform: scale(.57); }
-      .story, .coffee, .brew { padding: 76px 0; }
-      .seal { width: 245px; height: 245px; }
-      .seal-inner b { font-size: 35px; }
-      .story-visual { min-height: 347px; }
-      .blue-note { width: 185px; padding: 20px; }
-      .blue-note p { font-size: 16px; }
-      .section-heading { display: block; margin-bottom: 28px; }
-      .section-heading p { margin-top: 14px; font-size: 14px; }
-      .coffee-grid { grid-template-columns: 1fr; }
-      .coffee-card, .coffee-card:nth-child(3) { min-height: 330px; grid-column: auto; }
-      .coffee-card { padding: 25px; }
-      .brew-art { height: 310px; }
-      .water-rings { top: 45px; width: 178px; height: 178px; box-shadow: 0 0 0 23px rgba(117,198,232,.12), 0 0 0 53px rgba(117,198,232,.065); }
-      .dripper { top: 95px; transform: translateX(-50%) scale(.75); }
-      .carafe { bottom: 37px; transform: translateX(-50%) scale(.75); }
-      .visit { padding: 76px 0; }
-      .subscribe-form { display: grid; gap: 0; border: 0; }
-      .subscribe-form input { min-height: 54px; border: 1px solid rgba(255,255,255,.62); }
-      .subscribe-form button { min-height: 54px; margin-top: 10px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 33px; }
-      .footer-brand { grid-column: auto; }
-      .footer-bottom { display: grid; gap: 8px; }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
     }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-      .reveal { opacity: 1; transform: none; }
+
+    .nav-link {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--amber-primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--green-dark);
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 24px;
+      color: var(--green-dark);
+      padding: 6px;
+    }
+
+    /* ========================================================
+       Hero 旗艦主視覺區 (Hero Section)
+       ======================================================== */
+    .hero {
+      position: relative;
+      padding: 72px 0 100px;
+      overflow: hidden;
+      background: radial-gradient(circle at 85% 15%, rgba(125, 168, 118, 0.35) 0%, transparent 55%),
+                  radial-gradient(circle at 10% 85%, rgba(200, 135, 43, 0.28) 0%, transparent 45%),
+                  var(--green-dark);
+      color: #ffffff;
+    }
+
+    .hero .eyebrow {
+      color: var(--amber-light);
+    }
+
+    .hero .eyebrow::before,
+    .hero .eyebrow::after {
+      background: var(--green-light);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 4.6vw, 56px);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: 0.04em;
+      margin-bottom: 22px;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(120deg, var(--green-soft) 0%, var(--amber-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 16.5px;
+      color: rgba(238, 246, 236, 0.92);
+      line-height: 1.9;
+      margin-bottom: 34px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .hero .btn-outline {
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero .btn-outline:hover {
+      background: #ffffff;
+      color: var(--green-dark);
+      border-color: #ffffff;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .hero-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: #eef6ec;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(168, 204, 162, 0.35);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-badge-item svg {
+      color: var(--amber-gold);
+    }
+
+    /* 藝術感茶席插畫 */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 450px;
+    }
+
+    .art-ring-canvas {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffffff, var(--green-mist));
+      box-shadow: 0 25px 60px rgba(22, 59, 39, 0.12), inset 0 0 0 1px rgba(215, 230, 218, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .art-pulse-ring {
+      position: absolute;
+      inset: 14px;
+      border-radius: 50%;
+      border: 1px dashed rgba(125, 168, 118, 0.5);
+      animation: spinClockwise 60s linear infinite;
+    }
+
+    @keyframes spinClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .floating-chip {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 13px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(215, 230, 218, 0.95);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 3;
+      animation: floatChip 4.5s ease-in-out infinite alternate;
+    }
+
+    .chip-one {
+      top: 15px;
+      left: -20px;
+    }
+
+    .chip-two {
+      bottom: 25px;
+      right: -15px;
+      animation-delay: -2.2s;
+    }
+
+    @keyframes floatChip {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-12px); }
+    }
+
+    .chip-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .chip-icon-amber {
+      background: var(--amber-mist);
+      color: var(--amber-primary);
+    }
+
+    .chip-icon-green {
+      background: var(--green-mist);
+      color: var(--green-forest);
+    }
+
+    .chip-text strong {
+      display: block;
+      font-size: 14px;
+      color: var(--green-dark);
+    }
+
+    .chip-text span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ========================================================
+       風土與四大精髓 (Highlights Banner)
+       ======================================================== */
+    .four-essences {
+      padding: 40px 0 80px;
+    }
+
+    .essence-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .essence-card {
+      background: var(--surface-white);
+      padding: 32px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .essence-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green-light), var(--amber-primary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .essence-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--green-soft);
+    }
+
+    .essence-card:hover::before {
+      opacity: 1;
+    }
+
+    .essence-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--green-mist);
+      color: var(--green-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .essence-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 10px;
+    }
+
+    .essence-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ========================================================
+       茶葉故事與由來 (Story & Origin Section)
+       ======================================================== */
+    .story-section {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--green-tint) 0%, var(--green-mist) 50%, var(--green-tint) 100%);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 50px;
+    }
+
+    .story-box {
+      background: var(--surface-white);
+      border-radius: var(--radius-md);
+      padding: 38px 30px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.35s ease;
+    }
+
+    .story-box:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--amber-gold);
+    }
+
+    .story-watermark {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      font-size: 40px;
+      font-weight: 900;
+      color: rgba(22, 59, 39, 0.08);
+      line-height: 1;
+    }
+
+    .story-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--amber-dark);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .story-box h3 {
+      font-size: 21px;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .story-box p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      flex-grow: 1;
+    }
+
+    .story-highlight {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 13.5px;
+      color: var(--green-forest);
+      font-weight: 500;
+    }
+
+    /* 產地風土專題橫幅 */
+    .terroir-banner {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-forest) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 44px 50px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .terroir-banner::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -70px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(223, 158, 56, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .terroir-content h4 {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .terroir-content p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+    }
+
+    .terroir-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .t-stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .t-stat-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--amber-light);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .t-stat-label {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ========================================================
+       茶色與外觀鑑賞 (Tea Color & Aesthetics)
+       ======================================================== */
+    .color-section {
+      padding: 90px 0;
+    }
+
+    .color-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .tea-color-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .color-aspect-card {
+      background: var(--surface-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .color-aspect-card:hover {
+      border-color: var(--amber-primary);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .aspect-bullet {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    .bullet-dry {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-forest));
+    }
+
+    .bullet-soup {
+      background: linear-gradient(135deg, var(--amber-gold), var(--amber-primary));
+    }
+
+    .bullet-leaf {
+      background: linear-gradient(135deg, var(--green-light), var(--green-medium));
+    }
+
+    .aspect-body h4 {
+      font-size: 18px;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .aspect-body p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* 琥珀茶色圖解視覺 */
+    .liquor-showcase {
+      background: var(--surface-white);
+      border-radius: var(--radius-lg);
+      padding: 38px 34px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .liquor-visual-cup {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #ffd27d 0%, var(--amber-gold) 45%, var(--amber-primary) 80%, var(--amber-dark) 100%);
+      box-shadow: 0 0 0 10px #ffffff,
+                  0 0 0 14px var(--border-color),
+                  0 16px 36px rgba(200, 135, 43, 0.3);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .liquor-visual-cup::after {
+      content: "";
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      width: 40px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45);
+      transform: rotate(-30deg);
+    }
+
+    .liquor-golden-ring {
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+      background: rgba(22, 59, 39, 0.65);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(4px);
+    }
+
+    .liquor-meta-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .meta-item {
+      background: var(--green-tint);
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .meta-item span {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .meta-item strong {
+      font-size: 15px;
+      color: var(--green-dark);
+    }
+
+    /* ========================================================
+       如何品鑑 (How to Taste & Appreciate)
+       ======================================================== */
+    .tasting-section {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--green-mist) 0%, var(--green-tint) 100%);
+    }
+
+    .taste-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .taste-card {
+      background: var(--surface-white);
+      border-radius: var(--radius-md);
+      padding: 34px 24px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .taste-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--amber-primary);
+    }
+
+    .taste-badge-circle {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: var(--green-mist);
+      color: var(--green-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--green-soft);
+      font-size: 24px;
+    }
+
+    .taste-card h4 {
+      font-size: 19px;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .taste-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* 風味輪與感官雷達數值 */
+    .sensory-profile-box {
+      background: var(--surface-white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .profile-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .p-bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .p-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    .p-bar-label span:last-child {
+      color: var(--amber-dark);
+    }
+
+    .p-bar-track {
+      height: 10px;
+      background: var(--green-mist);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .p-bar-fill {
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: linear-gradient(90deg, var(--green-light), var(--amber-primary));
+    }
+
+    .profile-text-side h4 {
+      font-size: 22px;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .profile-text-side p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .profile-quote {
+      background: var(--amber-mist);
+      border-left: 4px solid var(--amber-primary);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 14px;
+      color: var(--amber-dark);
+      font-style: italic;
+    }
+
+    /* ========================================================
+       沖泡特色與指南 (Brewing Characteristics & Timer)
+       ======================================================== */
+    .brewing-section {
+      padding: 90px 0;
+    }
+
+    .brew-tab-nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .brew-tab-btn {
+      padding: 12px 28px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--surface-white);
+      border: 1.5px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brew-tab-btn.active {
+      background: var(--green-forest);
+      color: #ffffff;
+      border-color: var(--green-forest);
+      box-shadow: 0 4px 16px rgba(22, 59, 39, 0.25);
+    }
+
+    .brew-content-card {
+      background: var(--surface-white);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    .brew-panel {
+      display: none;
+    }
+
+    .brew-panel.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .brew-detail-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .param-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .param-card {
+      background: var(--green-tint);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px 12px;
+      text-align: center;
+    }
+
+    .param-card .p-title {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .param-card .p-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .step-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-unit {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .step-no {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--amber-primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-detail h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 3px;
+    }
+
+    .step-detail p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* 沖泡計時小工具 */
+    .timer-card {
+      background: linear-gradient(145deg, #ffffff, var(--green-mist));
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timer-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+
+    .timer-card .sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .timer-digit {
+      font-size: 62px;
+      font-weight: 800;
+      color: var(--green-dark);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: 0.05em;
+    }
+
+    .timer-chips {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .timer-chip-btn {
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12.5px;
+      background: var(--surface-white);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .timer-chip-btn.active {
+      background: var(--green-mist);
+      color: var(--green-forest);
+      border-color: var(--green-light);
+    }
+
+    .timer-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn-t-start {
+      background: var(--green-forest);
+      color: #ffffff;
+      padding: 10px 26px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn-t-reset {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .timer-status-msg {
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: var(--green-forest);
+      min-height: 19px;
+    }
+
+    /* ========================================================
+       茶友常見問答 (FAQ Section)
+       ======================================================== */
+    .faq-section {
+      padding: 80px 0;
+      background: var(--green-mist);
+    }
+
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-card {
+      background: var(--surface-white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .faq-card.active {
+      border-color: var(--amber-gold);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-toggle-btn {
+      width: 100%;
+      padding: 22px 26px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .faq-toggle-btn:hover {
+      color: var(--amber-primary);
+    }
+
+    .faq-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green-mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-forest);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-card.active .faq-arrow {
+      transform: rotate(180deg);
+      background: var(--amber-primary);
+      color: #ffffff;
+    }
+
+    .faq-content {
+      display: none;
+      padding: 0 26px 22px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      border-top: 1px solid rgba(215, 230, 218, 0.4);
+      padding-top: 16px;
+    }
+
+    .faq-card.active .faq-content {
+      display: block;
+    }
+
+    /* ========================================================
+       茶人手札 / 訂閱與交流 (Newsletter CTA)
+       ======================================================== */
+    .newsletter-section {
+      padding: 80px 0;
+    }
+
+    .newsletter-banner {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-forest) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .newsletter-banner::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(223, 158, 56, 0.18), transparent 70%);
+    }
+
+    .newsletter-banner .eyebrow {
+      color: var(--amber-light);
+    }
+
+    .newsletter-banner .eyebrow::before, .newsletter-banner .eyebrow::after {
+      background: var(--amber-gold);
+    }
+
+    .newsletter-banner h2 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .newsletter-banner p {
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 580px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      outline: none;
+      font-size: 14.5px;
+      backdrop-filter: blur(8px);
+    }
+
+    .newsletter-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--amber-light);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ========================================================
+       頁腳 (Footer)
+       ======================================================== */
+    .site-footer {
+      background: var(--green-dark);
+      color: #ffffff;
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand h4 {
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.8;
+      max-width: 360px;
+    }
+
+    .footer-col h5 {
+      font-size: 15px;
+      color: var(--amber-light);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer-links a:hover {
+      color: var(--amber-light);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* 響應式佈局調節 */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-actions, .hero-badges {
+        justify-content: center;
+      }
+      .essence-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .color-layout {
+        grid-template-columns: 1fr;
+      }
+      .taste-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sensory-profile-box {
+        grid-template-columns: 1fr;
+      }
+      .brew-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .terroir-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 36px 30px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .brand-text h1 {
+        font-size: 16px;
+      }
+      .nav-actions {
+        display: none;
+      }
+      .nav-menu {
+        display: none;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .essence-grid {
+        grid-template-columns: 1fr;
+      }
+      .taste-steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .param-row {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <nav class="nav wrap" aria-label="主要導覽">
-      <a class="brand" href="#top" aria-label="回到藍天咖啡首頁">
-        <span class="brand-mark" aria-hidden="true">B</span>
-        <span class="brand-copy"><strong>藍天咖啡</strong><small>BLUE SKY COFFEE</small></span>
+
+  <!-- ========================================================
+       頂部導覽列 (Navbar)
+       ======================================================== -->
+  <header class="navbar" id="top">
+    <div class="container navbar-inner">
+      <a href="#top" class="brand-logo" aria-label="凍頂烏龍茶首頁">
+        <div class="brand-symbol">
+          <!-- 雅緻傳統茶壺 SVG 圖標 -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 10c1.5 0 3 1 3 3s-1.5 3-3 3"/>
+            <path d="M2 13c1 0 2-1 2-2V9c0-1 1-2 2-2h11c1 0 2 1 2 2v4c0 3-2.5 5-6 5H8c-3.5 0-6-2-6-5z"/>
+            <path d="M10 3h4"/>
+            <line x1="12" y1="3" x2="12" y2="7"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="serif">凍頂烏龍茶 台灣的故事</h1>
+          <span>DONG DING OOLONG</span>
+        </div>
       </a>
-      <button class="menu-toggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="開啟導覽選單">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#story">我們的故事</a>
-        <a href="#coffee">本季選豆</a>
-        <a href="#brew">沖煮日常</a>
-        <a class="nav-cta" href="#visit">訂閱風味通信</a>
+
+      <!-- 導覽連結 -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#story" class="nav-link">茶葉故事</a></li>
+          <li><a href="#color" class="nav-link">琥珀茶色</a></li>
+          <li><a href="#tasting" class="nav-link">如何品鑑</a></li>
+          <li><a href="#brewing" class="nav-link">沖泡特色</a></li>
+          <li><a href="#faq" class="nav-link">茶人問答</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#brewing" class="btn btn-amber" style="padding: 10px 22px; font-size: 14px;">體驗沖泡</a>
       </div>
-    </nav>
+
+      <!-- 行動端選單切換按鈕 -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="切換選單">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">HAND BREWED · SLOWLY ROASTED</p>
-          <h1 id="heroTitle">讓風味，在<span>藍天</span>下慢慢抵達。</h1>
-          <p class="hero-lede">藍天咖啡為喜歡手沖的您，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有屬於自己的晴朗天氣。</p>
-          <div class="hero-actions">
-            <a class="button button--sand" href="#coffee">探索本季咖啡豆 →</a>
-            <a class="outline-link" href="#story">認識藍天</a>
+  <!-- ========================================================
+       Hero 旗艦主視覺區 (Hero Section)
+       ======================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow eyebrow-left">
+          <span>台灣具代表性的傳統名茶 ‧ 鹿谷風土淬鍊</span>
+        </div>
+        <h2 class="hero-title serif">
+          山嵐凝韻千峰翠<br>
+          <span class="highlight">淬鍊一壺琥珀金</span>
+        </h2>
+        <p class="hero-desc">
+          凍頂烏龍茶源自南投縣鹿谷鄉凍頂山，承載著百餘年深厚的製茶智慧。歷經中度發酵與繁複龍眼木炭焙慢火熟化，造就半球緊結外觀、澄澈金黃琥珀茶湯，以及喉間經久不散的甘醇生津。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tasting" class="btn btn-forest">
+            <span>探索品鑑之道</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#story" class="btn btn-outline">
+            <span>細閱鹿谷故事</span>
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>南投鹿谷凍頂山 (海拔 600-1000m)</span>
           </div>
-          <p class="hero-note">TAIPEI · TAIWAN · EST. 2025</p>
-          <span class="scroll-cue">SCROLL TO DISCOVER</span>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="sun"></div>
-          <div class="mountain mountain--back"></div>
-          <div class="mountain"></div>
-          <div class="horizon"></div>
-          <div class="coffee-vessel"><div class="vessel-neck"></div><div class="vessel-body"></div><div class="vessel-handle"></div></div>
-          <div class="art-label"><strong>92°C</strong><span>理想水溫</span><span>細細喚醒香氣</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="story" id="story" aria-labelledby="storyTitle">
-      <div class="wrap story-grid">
-        <div class="story-visual reveal" aria-hidden="true">
-          <div class="seal"><div class="seal-inner"><b>B</b><span>慢一點，更清楚。</span><small>LET THE FLAVOUR SPEAK</small></div></div>
-          <aside class="blue-note"><p class="eyebrow">BLUE SKY NOTE</p><p>一杯好咖啡，從來不是匆忙完成的事。</p></aside>
-        </div>
-        <div class="story-copy reveal">
-          <p class="eyebrow">OUR PHILOSOPHY</p>
-          <h2 class="section-title" id="storyTitle">在一杯之間，看見產地的<span class="text-blue">晴朗</span>。</h2>
-          <p>我們相信，精品咖啡的美好不該被複雜掩蓋。以小批次烘焙留住豆子的個性，再用穩定、誠實的手沖，讓風土與時間在杯中變得清晰。</p>
-          <p>給懂得放慢腳步的人，也給每一個想重新認識咖啡的人。</p>
-          <a class="inline-link" href="#brew">看看我們如何沖煮 <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="coffee" id="coffee" aria-labelledby="coffeeTitle">
-      <div class="wrap">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow">SEASONAL SELECTION</p><h2 class="section-title" id="coffeeTitle">今天，想喝哪一片<span class="text-blue">藍天</span>？</h2></div>
-          <p>三款當季單品，為不同的晨光、午後與靜夜而選。</p>
-        </div>
-        <div class="coffee-grid">
-          <article class="coffee-card reveal">
-            <div class="card-top">01 / BRIGHT</div><p class="origin">ETHIOPIA · YIRGACHEFFE</p><h3>衣索比亞・耶加雪菲</h3><p class="flavour">白花、佛手柑、蜂蜜</p>
-            <div class="card-footer"><span class="price">NT$ 520 / 200g</span><button class="save-coffee" type="button" data-coffee="衣索比亞・耶加雪菲">加入收藏 ＋</button></div>
-          </article>
-          <article class="coffee-card reveal">
-            <div class="card-top">02 / JUICY</div><p class="origin">KENYA · KIRINYAGA</p><h3>肯亞・祈安布</h3><p class="flavour">黑醋栗、洛神、葡萄柚</p>
-            <div class="card-footer"><span class="price">NT$ 580 / 200g</span><button class="save-coffee" type="button" data-coffee="肯亞・祈安布">加入收藏 ＋</button></div>
-          </article>
-          <article class="coffee-card reveal">
-            <div class="card-top">03 / ROUND</div><p class="origin">COLOMBIA · HUILA</p><h3>哥倫比亞・慧蘭</h3><p class="flavour">黃桃、焦糖、可可尾韻</p>
-            <div class="card-footer"><span class="price">NT$ 460 / 200g</span><button class="save-coffee" type="button" data-coffee="哥倫比亞・慧蘭">加入收藏 ＋</button></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="brew" id="brew" aria-labelledby="brewTitle">
-      <div class="wrap brew-grid">
-        <div class="brew-art reveal" aria-hidden="true"><div class="water-rings"></div><div class="dripper"></div><div class="carafe"></div><div class="brew-caption"><span>V60 / 15G : 240ML</span><strong>2'45''</strong></div></div>
-        <div class="brew-copy reveal">
-          <p class="eyebrow">A QUIET RITUAL</p>
-          <h2 class="section-title" id="brewTitle">把時間交給水，讓咖啡說<span class="text-blue">自己的話</span>。</h2>
-          <p>不需要繁複儀式，只要三個安靜的步驟。每一個參數，都是為了讓你更靠近豆子原本的樣子。</p>
-          <div class="brew-steps">
-            <div class="brew-step"><span class="step-number">01</span><div><h3>研磨，先聞見期待</h3><p>15g 中細研磨，讓香氣從指尖開始展開。</p></div></div>
-            <div class="brew-step"><span class="step-number">02</span><div><h3>悶蒸，等待第一個呼吸</h3><p>以 92°C 熱水浸潤 30 秒，喚醒甜感與層次。</p></div></div>
-            <div class="brew-step"><span class="step-number">03</span><div><h3>注水，保持自己的節奏</h3><p>穩定畫圈，讓 240ml 的清澈在 2 分 45 秒完成。</p></div></div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            <span>傳統中焙火 ‧ 炭焙熟果甜香</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <span>七泡有餘香 ‧ 重喉韻深回甘</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="visit" id="visit" aria-labelledby="visitTitle">
-      <div class="wrap reveal">
-        <p class="eyebrow">THE BLUE SKY LETTER</p>
-        <h2 id="visitTitle">把下一杯好咖啡，寄到你的日常裡。</h2>
-        <p>每月一封風味通信，分享新豆、沖煮靈感與只給會員的小小驚喜。</p>
-        <form class="subscribe-form" id="subscribeForm">
-          <input type="email" aria-label="電子郵件地址" placeholder="your@email.com" required>
-          <button type="submit">訂閱風味通信</button>
+      <!-- 視覺藝術呈現 -->
+      <div class="hero-visual">
+        <div class="art-ring-canvas">
+          <div class="art-pulse-ring"></div>
+
+          <!-- 自繪傳統炭焙茶席與凍頂山雲霧 SVG 插畫 -->
+          <svg width="290" height="290" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#eef6ec"/>
+                <stop offset="100%" stop-color="#ffffff"/>
+              </linearGradient>
+              <linearGradient id="peakGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7da876"/>
+                <stop offset="100%" stop-color="#1e4d34"/>
+              </linearGradient>
+              <linearGradient id="teaLiquorGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffd580"/>
+                <stop offset="60%" stop-color="#df9e38"/>
+                <stop offset="100%" stop-color="#c8872b"/>
+              </linearGradient>
+              <linearGradient id="clayPotGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#9a5b3a"/>
+                <stop offset="100%" stop-color="#64361e"/>
+              </linearGradient>
+            </defs>
+
+            <!-- 凍頂山群巒起伏 -->
+            <path d="M10 240 C60 160, 110 190, 160 140 C210 90, 270 170, 310 240 Z" fill="url(#peakGrad)" opacity="0.85"/>
+            <path d="M0 260 C50 200, 120 220, 180 180 C240 140, 280 200, 320 260 Z" fill="#163b27" opacity="0.95"/>
+
+            <!-- 裊裊晨霧飄拂 -->
+            <path d="M40 180 Q100 160 160 175 T280 165" stroke="rgba(255,255,255,0.7)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M20 205 Q90 190 170 200 T300 195" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"/>
+
+            <!-- 茶席水泉漣漪 -->
+            <ellipse cx="160" cy="250" rx="110" ry="26" fill="url(#teaLiquorGrad)" opacity="0.3"/>
+            <ellipse cx="160" cy="250" rx="80" ry="18" fill="url(#teaLiquorGrad)" opacity="0.5"/>
+
+            <!-- 經典紫砂朱泥壺 -->
+            <g transform="translate(45, 120)">
+              <!-- 壺把手 -->
+              <path d="M30 65 C10 65 5 40 25 35" stroke="url(#clayPotGrad)" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <!-- 壺身 -->
+              <ellipse cx="65" cy="55" rx="42" ry="28" fill="url(#clayPotGrad)"/>
+              <!-- 壺蓋與蓋鈕 -->
+              <ellipse cx="65" cy="30" rx="22" ry="8" fill="#a86644"/>
+              <circle cx="65" cy="20" r="5" fill="#c47a52"/>
+              <!-- 壺嘴與注水茶流 -->
+              <path d="M100 48 Q118 42 125 32" stroke="url(#clayPotGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <!-- 琥珀色茶湯出流線條 -->
+              <path d="M125 35 Q145 70 140 110" stroke="url(#teaLiquorGrad)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+            </g>
+
+            <!-- 白瓷品茗杯接湯 -->
+            <g transform="translate(145, 205)">
+              <path d="M15 15 C15 45, 65 45, 65 15 Z" fill="#ffffff" stroke="#d7e6da" stroke-width="2"/>
+              <ellipse cx="40" cy="16" rx="24" ry="7" fill="url(#teaLiquorGrad)"/>
+            </g>
+
+            <!-- 裊裊茶香蒸氣 -->
+            <path d="M185 200 Q190 170 180 150 T190 120" stroke="rgba(200, 135, 43, 0.5)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M200 195 Q205 175 195 155 T205 130" stroke="rgba(200, 135, 43, 0.4)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+
+        <!-- 浮動卡片 1 -->
+        <div class="floating-chip chip-one">
+          <div class="chip-icon chip-icon-amber">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            </svg>
+          </div>
+          <div class="chip-text">
+            <strong>琥珀金黃茶湯</strong>
+            <span>澄澈明亮 ‧ 金黃環光</span>
+          </div>
+        </div>
+
+        <!-- 浮動卡片 2 -->
+        <div class="floating-chip chip-two">
+          <div class="chip-icon chip-icon-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z"/>
+            </svg>
+          </div>
+          <div class="chip-text">
+            <strong>慢火木炭深焙</strong>
+            <span>熟果蜜甜 ‧ 喉韻生津</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       風土與四大精髓 (Four Essences)
+       ======================================================== -->
+  <section class="four-essences">
+    <div class="container">
+      <div class="essence-grid">
+        <div class="essence-card">
+          <div class="essence-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="serif">鹿谷名峰風土</h3>
+          <p>產於南投鹿谷凍頂山周邊彰雅、永隆、鳳凰村，終年雲霧漫布、紅黃礫質土壤排水絕佳，造就厚實葉質。</p>
+        </div>
+
+        <div class="essence-card">
+          <div class="essence-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="serif">半球緊結外觀</h3>
+          <p>傳承布球揉捻繁複工藝，茶葉捲曲緊結呈半球型，色澤墨綠油潤帶砂綠光澤，沉重結實、便於陳放轉韻。</p>
+        </div>
+
+        <div class="essence-card">
+          <div class="essence-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+            </svg>
+          </div>
+          <h3 class="serif">金黃琥珀色澤</h3>
+          <p>經中度發酵與炭焙熟化，茶湯金黃透綠轉明澄琥珀金，杯面泛起燦爛金環，清澈純淨無微粒雜質。</p>
+        </div>
+
+        <div class="essence-card">
+          <div class="essence-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="1" x2="6" y2="4"/>
+              <line x1="10" y1="1" x2="10" y2="4"/>
+              <line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <h3 class="serif">深厚甘醇喉韻</h3>
+          <p>台灣烏龍茶中「喉韻」之首。入口滋味濃郁圓潤，炭焙火香與熟果甜香交疊，兩頰生津、回甘深遠綿長。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶葉故事與由來 (Story & Legend Section)
+       ======================================================== -->
+  <section class="story-section" id="story">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>歷史傳承 ‧ 溯源鹿谷</span>
+        </div>
+        <h2 class="section-title serif">
+          茶葉故事：<em>凍頂山麓的百年傳奇</em>
+        </h2>
+        <p class="section-subtitle">
+          從清代舉人林鳳池的感恩情懷，到先民繃緊腳尖上山採茶的歲月，凍頂烏龍見證了台灣茶文化的黃金篇章。
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <!-- 故事 1 -->
+        <div class="story-box">
+          <span class="story-watermark">01</span>
+          <span class="story-tag">名山緣起</span>
+          <h3 class="serif">「凍腳尖」上山的凍頂地名</h3>
+          <p>
+            「凍頂」並非寒冷結冰之意，而是南投鹿谷鄉的一座獨立山峰。早期山路崎嶇陡峭，且因長年雨多霧濃、山徑泥濘濕滑。先民與茶農上山採茶時，必須緊緊繃起腳尖避免滑倒，客家與閩南語俗稱「凍腳尖」，日久便將這座雲霧山頂稱作「凍頂山」。
+          </p>
+          <div class="story-highlight">
+            「步步凍腳尖，方能登臨雲霧繚繞的極佳茶園。」
+          </div>
+        </div>
+
+        <!-- 故事 2 -->
+        <div class="story-box">
+          <span class="story-watermark">02</span>
+          <span class="story-tag">文人傳芳</span>
+          <h3 class="serif">林鳳池舉人與武夷茶苗傳奇</h3>
+          <p>
+            清咸豐五年（1855年），鹿谷文人林鳳池前往福建福州參加鄉試。鄉親感其苦讀，慷慨解囊資助盤纏。林鳳池果然高中舉人，為感念宗親厚恩，返台時特從武夷山攜回 36 株「青心烏龍」茶苗，贈予族親林三顯植於凍頂山，從此開枝散葉，成為台灣凍頂烏龍茶之鼻祖。
+          </p>
+          <div class="story-highlight">
+            「舉人還鄉手植綠苗，開創台灣烏龍茶百年盛景。」
+          </div>
+        </div>
+
+        <!-- 故事 3 -->
+        <div class="story-box">
+          <span class="story-watermark">03</span>
+          <span class="story-tag">匠心傳承</span>
+          <h3 class="serif">龍眼木炭慢火焙香之魂</h3>
+          <p>
+            凍頂茶最令人稱道之處，在於精熟的「中發酵（30%）、中焙火」製茶技法。歷經萎凋、大浪、殺青後，以布球反覆包揉成堅實緊結的半球狀，再送入烘焙籠以龍眼木炭火慢火深焙。高溫熱力促使兒茶素溫和轉化，褪去青澀，賦予茶湯渾厚濃醇的熟果甜韻。
+          </p>
+          <div class="story-highlight">
+            「火候入微，化草木之性為深厚溫潤的琥珀甘霖。」
+          </div>
+        </div>
+      </div>
+
+      <!-- 產地風土專題橫幅 -->
+      <div class="terroir-banner">
+        <div class="terroir-content">
+          <h4 class="serif">南投鹿谷 ‧ 天賦異稟的高山茶鄉風土</h4>
+          <p>
+            鹿谷鄉平均海拔約在 600 至 1000 公尺之間，氣候涼爽、終日雲霧籠罩，漫射光線充足，使茶樹芽葉積蓄了豐沛的胺基酸。加之土壤為富含有機質的紅黃微酸性礫質土，排水極佳，成就了凍頂茶葉片肥厚、果膠質飽滿的優良先天體質。
+          </p>
+        </div>
+        <div class="terroir-stats">
+          <div class="t-stat-card">
+            <span class="t-stat-num">1855 年</span>
+            <span class="t-stat-label">林鳳池舉人引進栽植</span>
+          </div>
+          <div class="t-stat-card">
+            <span class="t-stat-num">800 m</span>
+            <span class="t-stat-label">鹿谷凍頂山平均海拔</span>
+          </div>
+          <div class="t-stat-card">
+            <span class="t-stat-num">30%</span>
+            <span class="t-stat-label">傳統黃金中發酵度</span>
+          </div>
+          <div class="t-stat-card">
+            <span class="t-stat-num">7 泡+</span>
+            <span class="t-stat-label">沸水功夫沖泡極致耐泡</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶色與外觀鑑賞 (Tea Color & Aesthetics)
+       ======================================================== -->
+  <section class="color-section" id="color">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>視覺盛宴 ‧ 觀形辨色</span>
+        </div>
+        <h2 class="section-title serif">
+          茶色之美：<em>金黃透亮 ‧ 琥珀生輝</em>
+        </h2>
+        <p class="section-subtitle">
+          凍頂烏龍茶以其層次分明的「墨綠乾茶」、「澄澈琥珀茶湯」與「綠葉紅鑲邊葉底」，展現傳統工藝的卓越造詣。
+        </p>
+      </div>
+
+      <div class="color-layout">
+        <!-- 左側外觀色澤特色 -->
+        <div class="tea-color-cards">
+          <div class="color-aspect-card">
+            <div class="aspect-bullet bullet-dry">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3a9 9 0 0 1 9 9"/>
+              </svg>
+            </div>
+            <div class="aspect-body">
+              <h4>乾茶外觀：墨綠帶砂綠，緊結如珠</h4>
+              <p>經過傳統布球揉捻與乾燥，茶葉顆粒緊密捲結成半球型。色澤墨綠油潤，表面隱現白霜般的「砂綠」光澤，手感沉重扎實，互相碰撞時有鏗鏘清脆之聲。</p>
+            </div>
+          </div>
+
+          <div class="color-aspect-card">
+            <div class="aspect-bullet bullet-soup">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+            <div class="aspect-body">
+              <h4>茶湯色澤：蜜黃透綠，轉澄澈金黃琥珀</h4>
+              <p>注水沖泡後，第一泡呈現明豔的蜜黃帶微綠；隨著焙火物質舒展，茶湯轉為濃郁澄澈的金黃色至琥珀色，清澈如鏡、無絲毫混濁，杯緣泛起一道迷人的金黃光圈。</p>
+            </div>
+          </div>
+
+          <div class="color-aspect-card">
+            <div class="aspect-bullet bullet-leaf">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              </svg>
+            </div>
+            <div class="aspect-body">
+              <h4>葉底相貌：綠葉紅鑲邊，油潤富彈性</h4>
+              <p>沖泡完全舒展後的葉底柔軟厚實，呈現烏龍茶經典的「三紅七綠（綠葉紅鑲邊）」，葉脈隆起有光澤，經過多次滾沸熱水沖泡依然維持極佳韌度，印證高山茶的厚質本色。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右側琥珀茶色視覺焦點 -->
+        <div class="liquor-showcase">
+          <div style="text-align: center; margin-bottom: 20px;">
+            <span class="eyebrow" style="margin-bottom: 8px;">琥珀金湯 ‧ 經典色澤指標</span>
+            <h3 class="serif" style="font-size: 22px; color: var(--green-dark);">澄澈純粹的金黃流光</h3>
+          </div>
+
+          <div class="liquor-visual-cup">
+            <span class="liquor-golden-ring">✨ 燦爛金黃光環 (Golden Ring)</span>
+          </div>
+
+          <div class="liquor-meta-list">
+            <div class="meta-item">
+              <span>發酵度對應色相</span>
+              <strong>30% 蜜黃轉金黃</strong>
+            </div>
+            <div class="meta-item">
+              <span>烘焙度對應色相</span>
+              <strong>中度炭焙琥珀金</strong>
+            </div>
+            <div class="meta-item">
+              <span>茶湯澄清度</span>
+              <strong>明澈透光 ‧ 零雜質</strong>
+            </div>
+            <div class="meta-item">
+              <span>杯底殘香表現</span>
+              <strong>濃郁果糖冷杯香</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       如何品鑑 (How to Taste & Appreciate)
+       ======================================================== -->
+  <section class="tasting-section" id="tasting">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>茶席雅趣 ‧ 專業品飲</span>
+        </div>
+        <h2 class="section-title serif">
+          如何品鑑：<em>掌握四步，領略喉韻真味</em>
+        </h2>
+        <p class="section-subtitle">
+          品茶不只是解渴，更是身心與自然的對話。透過「觀色、聞香、啜飲、察底」四步品鑑法，細品凍頂烏龍的非凡氣度。
+        </p>
+      </div>
+
+      <!-- 四步品鑑指南 -->
+      <div class="taste-steps-grid">
+        <div class="taste-card">
+          <div class="taste-badge-circle">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M2 12c3-6 7-9 10-9s7 3 10 9-3 6-10 6-7-3-10-6z"/>
+            </svg>
+          </div>
+          <h4 class="serif">第一步 ‧ 觀茶色</h4>
+          <p>
+            將茶湯倒入白瓷品茗杯中，端起對光檢視。好的凍頂烏龍湯色金黃明澈、泛著琥珀光暈，杯面與杯壁交接處有一圈清晰金黃光環，油亮透徹。
+          </p>
+        </div>
+
+        <div class="taste-card">
+          <div class="taste-badge-circle">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+              <path d="M8 12s1.5 2 4 2 4-2 4-2"/>
+            </svg>
+          </div>
+          <h4 class="serif">第二步 ‧ 聞香韻</h4>
+          <p>
+            先嗅熱香：溫壺後搖動乾茶，聞其撲鼻炭火暖香；再嗅杯蓋熱香，感受熟果與蘭花底香；茶湯飲盡後輕嗅冷杯底，體會持久純淨的焦糖甜香。
+          </p>
+        </div>
+
+        <div class="taste-card">
+          <div class="taste-badge-circle">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h4 class="serif">第三步 ‧ 啜品味</h4>
+          <p>
+            輕含一口茶湯，微啟雙唇吸入少許空氣，使茶湯在舌面翻滾。滋味醇厚圓滑、濃而不澀，微帶細緻宜人的弱果酸，隨即轉化為綿綿甘甜。
+          </p>
+        </div>
+
+        <div class="taste-card">
+          <div class="taste-badge-circle">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <h4 class="serif">第四步 ‧ 探喉韻</h4>
+          <p>
+            茶湯入喉後放鬆呼吸，體會喉頭深處泛起的清涼甘醇（俗稱回甘）。兩頰生津如湧泉，甘甜滋味在喉間縈繞良久，此即凍頂茶名震天下的「喉韻」。
+          </p>
+        </div>
+      </div>
+
+      <!-- 感官指標評測卡片 -->
+      <div class="sensory-profile-box">
+        <div class="profile-bars">
+          <div class="p-bar-item">
+            <div class="p-bar-label">
+              <span>喉韻回甘表現 (Throat Sweetness)</span>
+              <span>★★★★★ 極致顯著</span>
+            </div>
+            <div class="p-bar-track">
+              <div class="p-bar-fill" style="width: 96%;"></div>
+            </div>
+          </div>
+
+          <div class="p-bar-item">
+            <div class="p-bar-label">
+              <span>烘焙炭火熟香 (Charcoal Aroma)</span>
+              <span>★★★★☆ 中重焙火熟香</span>
+            </div>
+            <div class="p-bar-track">
+              <div class="p-bar-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+
+          <div class="p-bar-item">
+            <div class="p-bar-label">
+              <span>滋味濃醇度 (Body Richness)</span>
+              <span>★★★★★ 厚實圓滑</span>
+            </div>
+            <div class="p-bar-track">
+              <div class="p-bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div class="p-bar-item">
+            <div class="p-bar-label">
+              <span>耐泡回沖次數 (Steeping Endurance)</span>
+              <span>★★★★★ 7 泡以上留香</span>
+            </div>
+            <div class="p-bar-track">
+              <div class="p-bar-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-text-side">
+          <h4 class="serif">品鑑專家筆記：何謂「重喉韻」？</h4>
+          <p>
+            一般清香型烏龍茶強調清揚的高山冷香與撲鼻花香，而凍頂烏龍茶則以「喉韻」見長。因其具備充分的發酵與精到炭焙，茶湯內質轉化成熟果甜香與可溶性糖，入喉溫潤無燥氣，喝完後數分鐘喉底依然生津回甜，是品茗老饕最難以忘懷的靈魂魅力。
+          </p>
+          <div class="profile-quote">
+            「未入口前已聞果香，入喉之後方顯真功夫；回甘甘如飴，喉潤潤如玉。」
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       沖泡特色與指南 (Brewing Characteristics & Timer)
+       ======================================================== -->
+  <section class="brewing-section" id="brewing">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>沸水烹茗 ‧ 喚醒醇韻</span>
+        </div>
+        <h2 class="section-title serif">
+          沖泡特色：<em>水溫與器皿的黃金法則</em>
+        </h2>
+        <p class="section-subtitle">
+          凍頂烏龍茶因經過半球緊結揉捻與中度焙火，耐溫耐泡。唯有掌握正確沖泡方法，才能將其深層炭焙香與極致喉韻淋漓展現。
+        </p>
+      </div>
+
+      <!-- 頁籤選擇 -->
+      <div class="brew-tab-nav">
+        <button class="brew-tab-btn active" data-tab="zisha">經典紫砂工夫泡 (首選)</button>
+        <button class="brew-tab-btn" data-tab="gaiwan">白瓷蓋碗清雅泡</button>
+        <button class="brew-tab-btn" data-tab="cold">盛夏冷泡甘露法</button>
+      </div>
+
+      <!-- 沖泡內容面板 -->
+      <div class="brew-content-card">
+        <!-- 面板 1：紫砂壺泡法 -->
+        <div class="brew-panel active" id="panel-zisha">
+          <div class="brew-detail-grid">
+            <div class="brew-left-guide">
+              <div class="param-row">
+                <div class="param-card">
+                  <span class="p-title">最佳水溫</span>
+                  <span class="p-val">95 - 100°C (沸水)</span>
+                </div>
+                <div class="param-card">
+                  <span class="p-title">建議茶具</span>
+                  <span class="p-val">宜興紫砂壺 / 朱泥壺</span>
+                </div>
+                <div class="param-card">
+                  <span class="p-title">茶水比例</span>
+                  <span class="p-val">1 : 20~25 (鋪底約 1/4)</span>
+                </div>
+              </div>
+
+              <div class="step-flow">
+                <div class="step-unit">
+                  <div class="step-no">1</div>
+                  <div class="step-detail">
+                    <h5>滾水溫壺燙杯</h5>
+                    <p>紫砂壺胎體厚實，先以沸水徹底淋壺溫杯，提高壺溫，便於後續逼出濃郁炭焙香。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">2</div>
+                  <div class="step-detail">
+                    <h5>投茶與溫潤醒茶</h5>
+                    <p>投入茶葉約佔壺容量 1/4 到 1/5。注入沸水 15 秒後迅速倒出醒茶，使緊結半球茶葉初步受熱舒展。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">3</div>
+                  <div class="step-detail">
+                    <h5>第一泡與第二泡</h5>
+                    <p>高沖注水蓋上壺蓋。第一泡浸泡約 50 秒即可出湯；第二泡因茶葉已舒展，縮短至 40 秒出湯。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">4</div>
+                  <div class="step-detail">
+                    <h5>後續回沖與遞增時間</h5>
+                    <p>第三泡 50 秒，第四泡 70 秒，每泡依序遞增 15~20 秒，可持續回沖 7 次以上，韻味猶存。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 計時器小工具 -->
+            <div class="timer-card">
+              <h4>凍頂品茗 ‧ 專屬功夫計時器</h4>
+              <div class="sub">精準掌握每一道茶湯出壺時機</div>
+              <div class="timer-digit" id="timerDigit">00:50</div>
+
+              <div class="timer-chips">
+                <button class="timer-chip-btn" data-sec="15">醒茶 (15秒)</button>
+                <button class="timer-chip-btn active" data-sec="50">第一泡 (50秒)</button>
+                <button class="timer-chip-btn" data-sec="40">第二泡 (40秒)</button>
+                <button class="timer-chip-btn" data-sec="60">第三泡 (60秒)</button>
+                <button class="timer-chip-btn" data-sec="80">第四泡 (80秒)</button>
+              </div>
+
+              <div class="timer-actions">
+                <button class="btn-t-start" id="timerStart">開始計時</button>
+                <button class="btn-t-reset" id="timerReset">重設</button>
+              </div>
+              <div class="timer-status-msg" id="timerStatus">點擊開始計時，茶湯完成時將播放雅致茶鐘鈴聲</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 面板 2：蓋碗泡法 -->
+        <div class="brew-panel" id="panel-gaiwan">
+          <div class="brew-detail-grid">
+            <div class="brew-left-guide">
+              <div class="param-row">
+                <div class="param-card">
+                  <span class="p-title">建議水溫</span>
+                  <span class="p-val">92 - 95°C</span>
+                </div>
+                <div class="param-card">
+                  <span class="p-title">建議茶具</span>
+                  <span class="p-val">120ml 白瓷蓋碗</span>
+                </div>
+                <div class="param-card">
+                  <span class="p-title">投茶量</span>
+                  <span class="p-val">約 5 - 6 克</span>
+                </div>
+              </div>
+
+              <div class="step-flow">
+                <div class="step-unit">
+                  <div class="step-no">1</div>
+                  <div class="step-detail">
+                    <h5>白瓷不吸香，最顯真實層次</h5>
+                    <p>蓋碗釉面細密不吸附茶香，能原汁原味展現焙火香、熟果甜與蘭花香氣的轉折變化。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">2</div>
+                  <div class="step-detail">
+                    <h5>沿碗壁定點注入沸水</h5>
+                    <p>避免直接猛烈衝擊茶心，順著蓋碗內壁緩緩注入，使熱力均勻滲透茶葉組織。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">3</div>
+                  <div class="step-detail">
+                    <h5>刮沫、聞蓋與瀝盡出湯</h5>
+                    <p>以碗蓋輕輕撇去水面微沫，傾斜蓋碗出湯務必滴瀝乾淨，避免茶葉久浸產生過重苦澀。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timer-card">
+              <h4>蓋碗品鑑優勢說明</h4>
+              <div class="sub">茶藝評審首選檢驗利器</div>
+              <div style="padding: 16px 0; text-align: left; font-size: 14px; color: var(--text-muted); line-height: 1.8;">
+                <p>🔹 <strong>清清楚楚看茶色</strong>：白瓷襯托下，茶湯從蜜黃到金黃琥珀的細緻漸變一覽無餘。</p>
+                <p style="margin-top: 10px;">🔹 <strong>細膩分辨香氣層次</strong>：隨時掀開碗蓋聞香，冷熱香氣對比分明。</p>
+                <p style="margin-top: 10px;">🔹 <strong>出湯俐落</strong>：隨時調整出湯節奏，收放自如。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 面板 3：冷泡甘露法 -->
+        <div class="brew-panel" id="panel-cold">
+          <div class="brew-detail-grid">
+            <div class="brew-left-guide">
+              <div class="param-row">
+                <div class="param-card">
+                  <span class="p-title">水質選擇</span>
+                  <span class="p-val">常溫冷開水 / 礦泉水</span>
+                </div>
+                <div class="param-card">
+                  <span class="p-title">茶水比例</span>
+                  <span class="p-val">1 : 100 (5g配500ml)</span>
+                </div>
+                <div class="param-card">
+                  <span class="p-title">冷藏時間</span>
+                  <span class="p-val">8 - 10 小時</span>
+                </div>
+              </div>
+
+              <div class="step-flow">
+                <div class="step-unit">
+                  <div class="step-no">1</div>
+                  <div class="step-detail">
+                    <h5>焙火茶冷泡的獨特魅力</h5>
+                    <p>不同於一般綠茶清香，炭焙凍頂烏龍冷泡後會呈現迷人的焦糖熟果甜味，風味沉穩圓潤。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">2</div>
+                  <div class="step-detail">
+                    <h5>低溫抑制單寧與咖啡因</h5>
+                    <p>低溫長時間萃取大幅減少單寧苦澀酸感釋出，即便腸胃敏感者或夜晚飲用亦十分溫和舒暢。</p>
+                  </div>
+                </div>
+
+                <div class="step-unit">
+                  <div class="step-no">3</div>
+                  <div class="step-detail">
+                    <h5>前晚冰鎮，清晨享甘甜</h5>
+                    <p>前一晚將茶葉置入水瓶放入冰箱，隔日早晨即可濾出金黃澄澈的清涼回甘茗湯。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timer-card">
+              <h4>夏日冷泡貼心提醒</h4>
+              <div class="sub">沁涼入喉 ‧ 炭焙甜香</div>
+              <div style="padding: 16px 0; text-align: left; font-size: 14px; color: var(--text-muted); line-height: 1.8;">
+                <p>🔹 <strong>建議 24 小時內飲用完畢</strong>，冷泡茶若離開冰箱過久宜儘速喝完。</p>
+                <p style="margin-top: 10px;">🔹 <strong>不加糖亦甘美如蜜</strong>：天然水解糖類在冷水中充分溶解，口感純甜順口。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶友問答 (FAQ Section)
+       ======================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>解惑釋疑 ‧ 茶道通識</span>
+        </div>
+        <h2 class="section-title serif">
+          茶人問答：<em>常見迷思與專業解答</em>
+        </h2>
+        <p class="section-subtitle">
+          為喜歡茶的您梳理選茶、藏茶與品茗的必備知識，輕鬆領會台灣烏龍之美。
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- FAQ 1 -->
+        <div class="faq-card active">
+          <button class="faq-toggle-btn">
+            <span>為什麼凍頂烏龍茶特別強調「喉韻」？什麼是真正的「回甘」？</span>
+            <div class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-content">
+            「喉韻」是指茶湯通過喉嚨咽喉後所引發的深層感官迴響。凍頂烏龍茶具有 30% 左右的中度發酵與慢火炭焙，茶多酚充分氧化聚合轉化為茶黃素與茶紅素，兒茶素苦澀降低，豐富的氨基酸與水解糖類在吞嚥後促使唾液腺持續分泌唾液（生津），使喉間清涼甘醇久久不散，這便是品茗行家最推崇的「喉韻回甘」。
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-card">
+          <button class="faq-toggle-btn">
+            <span>凍頂烏龍茶與高山烏龍茶（如梨山、阿里山茶）有何主要差別？</span>
+            <div class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-content">
+            主要差別在於「工藝風格與風味走向」：現代高山烏龍茶多偏向「輕發酵（15%~20%）、無焙火或輕火」，追求清新撲鼻的高山冷礦氣與淡雅蘭花香，湯色蜜綠；而傳統凍頂烏龍茶則遵循「中發酵（25%~35%）、中度炭火烘焙」，湯色金黃澄澈帶琥珀光澤，追求溫厚濃郁的熟果香、炭火甜香與深遠強烈的喉韻。
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-card">
+          <button class="faq-toggle-btn">
+            <span>什麼是葉底的「綠葉紅鑲邊」？</span>
+            <div class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-content">
+            「綠葉紅鑲邊」（俗稱三紅七綠）是傳統半發酵烏龍茶的重要品質象徵。在製茶做青階段，透過反覆攪拌碰撞使葉片邊緣細胞受損，接觸氧氣進行酵素性發酵氧化轉變成紅褐色；而葉片中心部位則維持綠色。殺青定型後，泡開的葉底便形成「葉緣泛紅、葉心翠綠」的美麗特徵，印證發酵工藝精準到位。
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-card">
+          <button class="faq-toggle-btn">
+            <span>為什麼沖泡凍頂烏龍茶一定要用接近 100°C 的滾沸熱水？</span>
+            <div class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-content">
+            因為凍頂烏龍茶經布球揉捻，茶質緊結結實，且有較深的炭焙火功。如果水溫不足（如 80°C~85°C），熱力無法穿透緊密的葉片組織，茶香將悶而不展、高沸點的熟果香與木質香氣無法釋放，茶湯容易顯得淡薄無力。唯有 95°C~100°C 沸水猛烈激發，才能揚香出韻。
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-card">
+          <button class="faq-toggle-btn">
+            <span>凍頂烏龍茶可以久放嗎？什麼是「陳年老凍頂」？</span>
+            <div class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-content">
+            非常適合長期存放！由於凍頂烏龍具備充足發酵與精良烘焙，含水量低且結構穩定，在乾燥、密封、避光避異味的陶甕中陳放數年至數十年後，茶性會更加溫厚醇和，轉化出深沉迷人的樟香、沉香或仙草果酸蜜香，這就是茶界推崇備至的「陳年老凍頂茶」。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶人手札 / 訂閱與交流 (Newsletter CTA)
+       ======================================================== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-banner">
+        <div class="eyebrow">
+          <span>茶友相聚 ‧ 歲月凝香</span>
+        </div>
+        <h2 class="serif">訂閱鹿谷茶事，與好茶長伴</h2>
+        <p>
+          南投鹿谷春冬二季茶賽是台灣茶界的年度盛典。留下您的信箱，我們將第一時間為您捎來當季凍頂烏龍最新採收動態、品鑑手札與茶席選品指南。
+        </p>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感謝您的訂閱！我們將為您寄送鹿谷凍頂烏龍的最新品鑑手札。');">
+          <input type="email" class="newsletter-input" placeholder="請輸入您的電子信箱..." required>
+          <button type="submit" class="btn btn-amber">即刻訂閱</button>
         </form>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand"><a class="brand" href="#top" aria-label="回到藍天咖啡首頁"><span class="brand-mark" aria-hidden="true">B</span><span class="brand-copy"><strong>藍天咖啡</strong><small>BLUE SKY COFFEE</small></span></a><p>為喜愛手沖咖啡的你，留下 一段慢慢品味、微微放晴的時間。</p></div>
-      <div><p class="footer-title">網站主題</p><div class="footer-links"><a href="#story">我們的故事</a><a href="#coffee">本季選豆</a><a href="#brew">沖煮日常</a></div></div>
-      <div><p class="footer-title">聯絡我們</p><div class="footer-links"><a href="mailto:hello@bluesky.coffee">hello@bluesky.coffee</a><address>台中市西屯區僑光路 100 號</address><span>每日 10:00 — 19:00</span></div></div>
     </div>
-    <div class="wrap footer-bottom"><span>© 2025 BLUE SKY COFFEE. ALL RIGHTS RESERVED.</span><span>BREW SLOW · LIVE BRIGHT</span></div>
+  </section>
+
+  <!-- ========================================================
+       頁腳 (Footer)
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="serif">凍頂烏龍茶 ‧ DONG DING OOLONG</h4>
+          <p>
+            源自南投縣鹿谷鄉的台灣經典名茶。恪守百餘年傳統中發酵與龍眼炭火烘焙工法，以澄澈琥珀茶湯與醇厚生津喉韻，傳承台灣傳統茶道的至臻境界。
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>探索引導</h5>
+          <ul class="footer-links">
+            <li><a href="#story">鹿谷凍頂山與林鳳池故事</a></li>
+            <li><a href="#color">琥珀茶色與金黃光圈鑑賞</a></li>
+            <li><a href="#tasting">四步專業品鑑與喉韻解析</a></li>
+            <li><a href="#brewing">紫砂功夫沖泡特色指南</a></li>
+            <li><a href="#faq">茶人常見問題與解答</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>產區風土</h5>
+          <ul class="footer-links">
+            <li><a href="#story">南投縣鹿谷鄉彰雅村 (凍頂山心腹)</a></li>
+            <li><a href="#story">鹿谷鄉永隆村 ‧ 傳統炭焙技藝</a></li>
+            <li><a href="#story">鹿谷鄉鳳凰村 ‧ 茶山雲海勝境</a></li>
+            <li><a href="#top">回頁面頂端 ↑</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 凍頂烏龍茶文化推廣專題. All rights reserved.</div>
+        <div>淺綠 ‧ 琥珀色 ‧ 墨綠 自然清新設計 ‧ 傳承台灣名茶底蘊</div>
+      </div>
+    </div>
   </footer>
-  <div class="toast" role="status" aria-live="polite"></div>
 
+  <!-- ========================================================
+       互動腳本 (JavaScript: Tabs, Timer with Audio, FAQ, Mobile)
+       ======================================================== -->
   <script>
-    (() => {
-      const menuButton = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      const toast = document.querySelector('.toast');
-      let toastTimer;
+    // --- 1. 沖泡方式頁籤切換 ---
+    const brewTabs = document.querySelectorAll('.brew-tab-btn');
+    const brewPanels = document.querySelectorAll('.brew-panel');
 
-      const closeMenu = () => {
-        navLinks.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.setAttribute('aria-label', '開啟導覽選單');
-        menuButton.textContent = '☰';
-      };
-      menuButton.addEventListener('click', () => {
-        const opening = !navLinks.classList.contains('open');
-        navLinks.classList.toggle('open', opening);
-        menuButton.setAttribute('aria-expanded', String(opening));
-        menuButton.setAttribute('aria-label', opening ? '關閉導覽選單' : '開啟導覽選單');
-        menuButton.textContent = opening ? '×' : '☰';
-      });
-      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    brewTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        brewTabs.forEach(t => t.classList.remove('active'));
+        brewPanels.forEach(p => p.classList.remove('active'));
 
-      const showToast = message => {
-        clearTimeout(toastTimer);
-        toast.textContent = message;
-        toast.classList.add('show');
-        toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
-      };
-      document.querySelectorAll('[data-coffee]').forEach(button => {
-        button.addEventListener('click', () => showToast(`已將「${button.dataset.coffee}」加入你的收藏。`));
+        tab.classList.add('active');
+        const targetId = `panel-${tab.dataset.tab}`;
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
       });
-      document.querySelector('#subscribeForm').addEventListener('submit', event => {
-        event.preventDefault();
-        event.currentTarget.reset();
-        showToast('謝謝訂閱，下一封晴朗的風味通信即將寄出。');
-      });
+    });
 
-      const revealItems = document.querySelectorAll('.reveal');
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!('IntersectionObserver' in window) || reducedMotion) {
-        revealItems.forEach(item => item.classList.add('visible'));
-      } else {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: .12 });
-        revealItems.forEach(item => observer.observe(item));
+    // --- 2. 互動品茗計時器 (Web Audio API 和弦提示) ---
+    let timerDuration = 50;
+    let timerRemaining = 50;
+    let timerInterval = null;
+    let isTimerRunning = false;
+
+    const timerDigit = document.getElementById('timerDigit');
+    const timerStart = document.getElementById('timerStart');
+    const timerReset = document.getElementById('timerReset');
+    const timerStatus = document.getElementById('timerStatus');
+    const timerChips = document.querySelectorAll('.timer-chip-btn');
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function updateDisplay() {
+      timerDigit.textContent = formatTime(timerRemaining);
+    }
+
+    // 播放醇和清幽的茶鐘提示聲 (使用 Web Audio API)
+    function playChimeSound() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+
+        // 溫和醇厚的五度和弦 (440Hz & 660Hz)
+        [440, 660].forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+
+          const startTime = ctx.currentTime + (idx * 0.14);
+          gain.gain.setValueAtTime(0, startTime);
+          gain.gain.linearRampToValueAtTime(0.35, startTime + 0.06);
+          gain.gain.exponentialRampToValueAtTime(0.0001, startTime + 2.0);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(startTime);
+          osc.stop(startTime + 2.0);
+        });
+      } catch (err) {
+        console.log("Audio notice prevented: ", err);
       }
-    })();
+    }
+
+    function startTimer() {
+      if (isTimerRunning) {
+        // 暫停
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        timerStart.textContent = '繼續計時';
+        timerStatus.textContent = '計時已暫停';
+      } else {
+        // 開始
+        isTimerRunning = true;
+        timerStart.textContent = '暫停';
+        timerStatus.textContent = '熱氣氤氳，正在激發凍頂烏龍熟果蜜香...';
+
+        timerInterval = setInterval(() => {
+          if (timerRemaining > 0) {
+            timerRemaining--;
+            updateDisplay();
+          } else {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            timerStart.textContent = '重新計時';
+            timerStatus.innerHTML = '<strong style="color: #c8872b;">✨ 琥珀茶湯已臻完美，請速速出湯入杯！</strong>';
+            playChimeSound();
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      timerRemaining = timerDuration;
+      updateDisplay();
+      timerStart.textContent = '開始計時';
+      timerStatus.textContent = '計時已重設';
+    }
+
+    timerStart.addEventListener('click', startTimer);
+    timerReset.addEventListener('click', resetTimer);
+
+    timerChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        timerChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        timerDuration = parseInt(chip.dataset.sec, 10);
+        resetTimer();
+      });
+    });
+
+    // --- 3. FAQ 手風琴摺疊 ---
+    const faqCards = document.querySelectorAll('.faq-card');
+    faqCards.forEach(card => {
+      const toggleBtn = card.querySelector('.faq-toggle-btn');
+      toggleBtn.addEventListener('click', () => {
+        const isActive = card.classList.contains('active');
+        faqCards.forEach(c => c.classList.remove('active'));
+        if (!isActive) {
+          card.classList.add('active');
+        }
+      });
+    });
+
+    // --- 4. 行動端選單切換 ---
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      const isExpanded = navMenu.style.display === 'flex';
+      if (isExpanded) {
+        navMenu.style.display = 'none';
+      } else {
+        navMenu.style.display = 'flex';
+        navMenu.style.flexDirection = 'column';
+        navMenu.style.position = 'absolute';
+        navMenu.style.top = '78px';
+        navMenu.style.left = '0';
+        navMenu.style.right = '0';
+        navMenu.style.background = '#ffffff';
+        navMenu.style.padding = '20px 24px';
+        navMenu.style.boxShadow = '0 10px 24px rgba(0,0,0,0.1)';
+        navMenu.style.borderBottom = '1px solid #d7e6da';
+      }
+    });
+
+    // 點擊選單內部項目自動收合行動選單
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navMenu.style.display = 'none';
+        }
+      });
+    });
   </script>
 </body>
 </html>
