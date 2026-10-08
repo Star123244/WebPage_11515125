@@ -3,475 +3,2475 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="藍天咖啡，為手沖咖啡愛好者挑選當季精品咖啡豆，讓每一杯都清澈、明亮、值得細品。">
-  <title>藍天咖啡｜讓風味，慢慢抵達</title>
+  <meta name="description" content="東方美人茶（白毫烏龍）專題介紹。探索大自然與小綠葉蟬點化的天然蜜果香、白毫五色茶葉傳奇由來、風味特色與專業沖泡指南。">
+  <title>東方美人｜蜜香天成 ‧ 雅韻清幽</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #062742;
-      --blue: #0c5b95;
-      --sky: #75c6e8;
-      --mist: #eaf5f7;
-      --cream: #fbfaf6;
-      --ink: #122534;
-      --muted: #607482;
-      --line: #d7e4e8;
-      --sand: #e5b66b;
-      --shadow: 0 18px 50px rgba(6, 39, 66, .13);
+      /* 藍綠清新主色系 */
+      --teal-deep: #0e3b38;
+      --teal-dark: #165651;
+      --teal-primary: #1e7069;
+      --teal-medium: #2a8a81;
+      --teal-soft: #42a99d;
+      --teal-light: #6bc4b8;
+      --teal-pale: #d6eeeb;
+      --teal-mist: #eef7f6;
+      --teal-tint: #f5faf9;
+      
+      /* 輔助茶金與蜜色 */
+      --amber-gold: #c98b2c;
+      --amber-light: #e6b059;
+      --honey-soft: #fbf3e4;
+      
+      /* 文字與中性色 */
+      --text-main: #142826;
+      --text-muted: #536e6b;
+      --text-light: #7c9895;
+      --border-color: #d2e6e3;
+      --surface-white: #ffffff;
+      
+      /* 陰影與圓角 */
+      --shadow-sm: 0 4px 12px rgba(14, 59, 56, 0.05);
+      --shadow-md: 0 10px 28px rgba(14, 59, 56, 0.08);
+      --shadow-lg: 0 20px 50px rgba(14, 59, 56, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      color: var(--ink);
-      background: var(--cream);
-      font-family: "Noto Sans TC", sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+      padding: 0;
     }
 
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button { cursor: pointer; }
-    .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
-    .serif { font-family: "Noto Serif TC", serif; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--teal-tint);
+      color: var(--text-main);
+      font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      transition: all 0.25s ease;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .serif {
+      font-family: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+    }
+
+    /* 徽章與副標 */
     .eyebrow {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin: 0 0 13px;
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .18em;
+      color: var(--teal-primary);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
-    .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 20px;
+      height: 1.5px;
+      background: var(--teal-soft);
+    }
+
+    .eyebrow-left::after {
+      display: none;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px;
+    }
+
     .section-title {
-      margin: 0;
-      font: 700 clamp(30px, 4vw, 46px)/1.28 "Noto Serif TC", serif;
-      letter-spacing: .035em;
+      font-size: clamp(28px, 3.6vw, 40px);
+      font-weight: 700;
+      color: var(--teal-deep);
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
     }
-    .section-title em { color: var(--blue); font-style: normal; }
-    .section-copy { max-width: 48ch; margin: 20px 0 0; color: var(--muted); }
-    .button {
+
+    .section-title em {
+      color: var(--teal-medium);
+      font-style: normal;
+      position: relative;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* 按鈕樣式 */
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 11px;
-      min-height: 50px;
-      padding: 12px 23px;
-      border: 1px solid transparent;
-      border-radius: 2px;
-      font-size: 14px;
+      gap: 10px;
+      padding: 13px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--teal-primary) 0%, var(--teal-dark) 100%);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--teal-medium) 0%, var(--teal-primary) 100%);
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, var(--amber-light) 0%, var(--amber-gold) 100%);
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--teal-soft);
+      color: var(--teal-primary);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline:hover {
+      background: var(--teal-primary);
+      color: #ffffff;
+      border-color: var(--teal-primary);
+    }
+
+    /* ========================================================
+       導覽列 (Navbar)
+       ======================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 250, 249, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(210, 230, 227, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--teal-primary), var(--teal-soft));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(30, 112, 105, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 21px;
       font-weight: 700;
-      letter-spacing: .04em;
-      transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+      color: var(--teal-deep);
+      letter-spacing: 0.1em;
+      line-height: 1.2;
     }
-    .button:hover { transform: translateY(-2px); }
-    .button:focus-visible, a:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
-    .button-primary { color: var(--navy); background: var(--sand); box-shadow: 0 9px 22px rgba(1, 35, 59, .2); }
-    .button-primary:hover { background: #f0c77f; }
-    .button-outline { color: #fff; border-color: rgba(255,255,255,.58); }
-    .button-outline:hover { background: rgba(255,255,255,.1); }
-    .arrow { font-size: 18px; line-height: 1; }
 
-    /* Header */
-    .site-header {
-      position: absolute;
-      z-index: 10;
-      width: 100%;
-      color: #fff;
-      border-bottom: 1px solid rgba(255, 255, 255, .16);
+    .brand-text span {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--teal-medium);
+      letter-spacing: 0.16em;
+      display: block;
     }
-    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 78px; }
-    .brand { display: flex; align-items: center; gap: 12px; font: 700 20px/1 "Noto Serif TC", serif; letter-spacing: .11em; }
-    .brand-mark {
-      display: grid;
-      width: 29px;
-      height: 29px;
-      place-items: center;
-      border: 1px solid var(--sky);
-      border-radius: 50%;
-      color: var(--sky);
-      font: 700 19px/1 "Playfair Display", serif;
-    }
-    .brand small { display: block; margin-top: 5px; color: rgba(255,255,255,.64); font: 600 8px/1 sans-serif; letter-spacing: .21em; }
-    .nav-links { display: flex; align-items: center; gap: 29px; font-size: 13px; font-weight: 500; }
-    .nav-links a { position: relative; padding: 6px 0; }
-    .nav-links a:not(.nav-cta)::after { content: ""; position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: var(--sky); transform: scaleX(0); transform-origin: right; transition: transform .22s; }
-    .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); transform-origin: left; }
-    .nav-cta { padding: 8px 16px !important; border: 1px solid rgba(255,255,255,.55); }
-    .nav-cta:hover { color: var(--navy); background: #fff; }
-    .menu-toggle { display: none; border: 0; color: #fff; background: transparent; }
 
-    /* Hero */
-    .hero { position: relative; min-height: 704px; overflow: hidden; color: #fff; background: var(--navy); }
-    .hero::before {
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
       content: "";
       position: absolute;
-      inset: 0;
-      opacity: .36;
-      background: radial-gradient(circle at 76% 45%, rgba(55, 167, 212, .75), transparent 23%), linear-gradient(117deg, rgba(4,25,45,.22) 0 48%, rgba(5,47,78,.82) 78%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--teal-primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
     }
-    .hero::after {
+
+    .nav-link:hover {
+      color: var(--teal-primary);
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 24px;
+      color: var(--teal-deep);
+      padding: 6px;
+    }
+
+    /* ========================================================
+       Hero 首頁旗艦區 (Hero Section)
+       ======================================================== */
+    .hero {
+      position: relative;
+      padding: 70px 0 100px;
+      overflow: hidden;
+      background: radial-gradient(circle at 80% 20%, rgba(107, 196, 184, 0.18) 0%, transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(201, 139, 44, 0.08) 0%, transparent 50%),
+                  var(--teal-tint);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 4.6vw, 56px);
+      font-weight: 900;
+      color: var(--teal-deep);
+      line-height: 1.25;
+      letter-spacing: 0.04em;
+      margin-bottom: 22px;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(120deg, var(--teal-primary), var(--teal-soft));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .hero-tag-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.7);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-color);
+    }
+
+    .hero-tag-item svg {
+      color: var(--teal-primary);
+    }
+
+    /* 藝術感茶藝插畫 */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 440px;
+    }
+
+    .art-frame {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffffff, var(--teal-mist));
+      box-shadow: 0 25px 60px rgba(14, 59, 56, 0.12), inset 0 0 0 1px rgba(210, 230, 227, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .art-glow-ring {
+      position: absolute;
+      inset: 12px;
+      border-radius: 50%;
+      border: 1px dashed rgba(66, 169, 157, 0.4);
+      animation: spinSlow 50s linear infinite;
+    }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(210, 230, 227, 0.9);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 3;
+      animation: floatSmooth 4s ease-in-out infinite alternate;
+    }
+
+    .card-one {
+      top: 18px;
+      left: -15px;
+    }
+
+    .card-two {
+      bottom: 25px;
+      right: -10px;
+      animation-delay: -2s;
+    }
+
+    @keyframes floatSmooth {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .badge-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--teal-mist);
+      color: var(--teal-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-text strong {
+      display: block;
+      font-size: 14px;
+      color: var(--teal-deep);
+    }
+
+    .card-text span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ========================================================
+       特色概覽 (Key Highlights Cards)
+       ======================================================== */
+    .highlights {
+      padding: 40px 0 80px;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .highlight-card {
+      background: var(--surface-white);
+      padding: 30px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-card::before {
       content: "";
       position: absolute;
       top: 0;
-      right: -180px;
-      width: 760px;
-      height: 760px;
-      border: 1px solid rgba(153,220,240,.22);
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal-soft), var(--teal-primary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal-pale);
+    }
+
+    .highlight-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--teal-mist);
+      color: var(--teal-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .highlight-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--teal-deep);
+      margin-bottom: 10px;
+    }
+
+    .highlight-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ========================================================
+       茶之由來與傳奇 (The Origin & Legend)
+       ======================================================== */
+    .origin-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, var(--teal-tint) 0%, var(--teal-mist) 50%, var(--teal-tint) 100%);
+      position: relative;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .story-card {
+      background: var(--surface-white);
+      border-radius: var(--radius-md);
+      padding: 36px 30px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.35s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal-soft);
+    }
+
+    .story-num {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      font-size: 38px;
+      font-weight: 900;
+      color: rgba(66, 169, 157, 0.15);
+      line-height: 1;
+    }
+
+    .story-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--teal-primary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .story-card h3 {
+      font-size: 21px;
+      color: var(--teal-deep);
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .story-card p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      flex-grow: 1;
+    }
+
+    .story-quote {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 13.5px;
+      color: var(--teal-dark);
+      font-style: italic;
+    }
+
+    /* 傳奇焦點橫幅 */
+    .legend-banner {
+      margin-top: 50px;
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-deep) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .legend-banner::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      bottom: -60px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
-      box-shadow: 0 0 0 62px rgba(153,220,240,.045), 0 0 0 180px rgba(153,220,240,.025);
-    }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.02fr .98fr; gap: 45px; align-items: center; min-height: 704px; padding: 122px 0 72px; }
-    .hero .eyebrow { color: var(--sky); }
-    .hero-title { max-width: 13ch; margin: 0; font: 900 clamp(42px, 5.5vw, 68px)/1.22 "Noto Serif TC", serif; letter-spacing: .075em; }
-    .hero-title .blue { color: var(--sky); }
-    .hero-lede { max-width: 42ch; margin: 26px 0 32px; color: rgba(255,255,255,.78); font-size: 16px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
-    .hero-note { margin-top: 28px; color: rgba(255,255,255,.52); font-size: 11px; letter-spacing: .1em; }
-    .hero-art { position: relative; min-height: 453px; }
-    .sun { position: absolute; top: 2%; right: 14%; width: 166px; height: 166px; border-radius: 50%; background: #93d6e6; box-shadow: 0 0 65px rgba(145,215,233,.36); }
-    .mountain { position: absolute; right: -4%; bottom: 2%; width: 98%; height: 70%; clip-path: polygon(0 73%, 23% 42%, 37% 59%, 61% 10%, 73% 29%, 84% 0, 100% 37%, 100% 100%, 0 100%); background: linear-gradient(135deg, #0b7eac, #06446f 70%); opacity: .85; }
-    .mountain::after { content: ""; position: absolute; inset: 0; background: linear-gradient(155deg, transparent 38%, rgba(2,35,58,.72) 38.5% 100%); }
-    .coffee-vessel { position: absolute; z-index: 2; right: 17%; bottom: 0; width: 255px; filter: drop-shadow(0 22px 21px rgba(0,0,0,.23)); }
-    .dripper { position: relative; width: 205px; height: 132px; margin: 0 auto -5px; border: 4px solid #e9f8fa; border-top-width: 6px; border-radius: 10px 10px 44% 44%; background: linear-gradient(115deg, rgba(123,206,225,.5), rgba(26,118,161,.23)); clip-path: polygon(0 0,100% 0,78% 100%,22% 100%); }
-    .dripper::after { content: ""; position: absolute; inset: 18px 16px 0; border-top: 1px solid rgba(255,255,255,.6); border-left: 1px solid rgba(255,255,255,.25); transform: skewX(-17deg); }
-    .carafe { position: relative; width: 170px; height: 181px; margin: 0 auto; border: 4px solid #e9f8fa; border-radius: 9px 9px 39% 39% / 9px 9px 19% 19%; background: linear-gradient(90deg, rgba(110,211,229,.26), rgba(1,52,87,.52)); }
-    .carafe::before { content: ""; position: absolute; top: -16px; left: 27px; width: 108px; height: 20px; border: 4px solid #e9f8fa; border-bottom: 0; border-radius: 50% 50% 0 0; }
-    .carafe::after { content: ""; position: absolute; right: 16px; bottom: 24px; left: 16px; height: 60px; border-radius: 3px 3px 26px 26px; background: linear-gradient(90deg, rgba(133,67,26,.84), rgba(76,33,9,.92)); }
-    .art-label { position: absolute; z-index: 3; top: 50%; right: 2%; width: 114px; padding-left: 12px; border-left: 1px solid var(--sky); color: rgba(255,255,255,.78); font-size: 10px; line-height: 1.7; letter-spacing: .1em; }
-    .art-label strong { display: block; color: var(--sky); font: 600 20px/1 "Playfair Display", serif; }
-    .scroll-line { position: absolute; bottom: 23px; left: max(24px, calc((100% - 1120px) / 2)); z-index: 2; display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,.56); font-size: 10px; letter-spacing: .15em; }
-    .scroll-line::before { content: ""; width: 38px; height: 1px; background: currentColor; }
-
-    /* Intro */
-    .intro { padding: 118px 0; background: #fff; }
-    .intro-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(45px, 8vw, 105px); align-items: center; }
-    .intro-stamp { position: relative; min-height: 355px; }
-    .stamp-circle { position: absolute; inset: 13px auto auto 0; display: grid; width: 290px; height: 290px; place-items: center; border: 1px solid #9dd7e7; border-radius: 50%; color: var(--blue); text-align: center; }
-    .stamp-circle::before { content: ""; position: absolute; inset: 14px; border: 1px dashed #a5d9e6; border-radius: 50%; }
-    .stamp-circle strong { display: block; font: 700 43px/1 "Playfair Display", serif; letter-spacing: -.04em; }
-    .stamp-circle span { display: block; margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
-    .stamp-card { position: absolute; right: 0; bottom: 0; width: 216px; padding: 21px 23px; color: #fff; background: var(--blue); box-shadow: var(--shadow); }
-    .stamp-card p { margin: 0; font-size: 12px; line-height: 1.8; }
-    .stamp-card b { display: block; margin-bottom: 8px; color: var(--sky); font: 600 12px/1 "Playfair Display", serif; letter-spacing: .14em; }
-    .intro .section-copy { font-size: 16px; }
-    .intro-link { display: inline-flex; gap: 10px; margin-top: 28px; padding-bottom: 4px; border-bottom: 1px solid var(--blue); color: var(--blue); font-size: 14px; font-weight: 700; }
-
-    /* Coffees */
-    .coffee-section { padding: 110px 0 120px; background: var(--mist); }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 43px; }
-    .section-head .section-copy { max-width: 35ch; margin: 0; font-size: 14px; }
-    .coffee-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
-    .coffee-card { position: relative; min-height: 384px; overflow: hidden; color: #fff; background: var(--navy); box-shadow: var(--shadow); }
-    .coffee-card::before { content: ""; position: absolute; right: -63px; bottom: -87px; width: 238px; height: 238px; border: 1px solid rgba(255,255,255,.29); border-radius: 50%; }
-    .coffee-card::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(160deg, transparent 42%, rgba(0,0,0,.28)); pointer-events: none; }
-    .coffee-card:nth-child(2) { background: #106396; }
-    .coffee-card:nth-child(3) { background: #164c68; }
-    .coffee-content { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 384px; padding: 29px; }
-    .coffee-number { color: var(--sky); font: 600 13px/1 "Playfair Display", serif; letter-spacing: .08em; }
-    .coffee-origin { margin: auto 0 7px; color: rgba(255,255,255,.63); font-size: 11px; font-weight: 600; letter-spacing: .14em; }
-    .coffee-card h3 { margin: 0; font: 700 27px/1.35 "Noto Serif TC", serif; letter-spacing: .05em; }
-    .coffee-notes { margin: 11px 0 22px; color: rgba(255,255,255,.75); font-size: 13px; }
-    .coffee-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.25); }
-    .price { font-size: 14px; font-weight: 700; }
-    .add-button { padding: 5px 0; border: 0; color: #fff; background: none; font-size: 12px; font-weight: 700; letter-spacing: .07em; }
-    .add-button:hover { color: var(--sand); }
-
-    /* Brew process */
-    .brew { overflow: hidden; padding: 118px 0; background: #fff; }
-    .brew-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: clamp(44px, 9vw, 112px); align-items: center; }
-    .brew-visual { position: relative; min-height: 396px; border: 1px solid var(--line); background: linear-gradient(140deg, #f4fafb 0 50%, #e5f4f7 50%); }
-    .brew-visual::before { content: ""; position: absolute; top: 35px; left: 34px; width: 70px; height: 1px; background: var(--blue); box-shadow: 0 9px 0 var(--blue), 0 18px 0 var(--blue); }
-    .pour-ring { position: absolute; top: 71px; right: 48px; width: 240px; height: 240px; border: 35px solid rgba(12,91,149,.13); border-radius: 50%; }
-    .pour-ring::after { content: ""; position: absolute; top: 45px; left: 45px; width: 80px; height: 80px; border: 3px solid var(--blue); border-radius: 50%; }
-    .brew-v60 { position: absolute; bottom: 35px; left: 51%; width: 178px; height: 150px; border: 4px solid var(--blue); background: rgba(255,255,255,.54); clip-path: polygon(0 0,100% 0,73% 100%,27% 100%); transform: translateX(-50%); }
-    .brew-v60::before { content: ""; position: absolute; top: 14px; right: 16px; bottom: 0; left: 16px; border-left: 1px solid #8dcce0; border-right: 1px solid #8dcce0; transform: skewX(-11deg); }
-    .brew-caption { position: absolute; right: 25px; bottom: 21px; color: var(--blue); font: 600 10px/1.4 "Playfair Display", serif; letter-spacing: .13em; text-align: right; }
-    .brew-steps { display: grid; gap: 0; margin: 28px 0 0; padding: 0; list-style: none; }
-    .brew-steps li { display: grid; grid-template-columns: 43px 1fr; gap: 15px; padding: 17px 0; border-top: 1px solid var(--line); }
-    .brew-steps li:last-child { border-bottom: 1px solid var(--line); }
-    .step-no { color: var(--blue); font: 600 15px/1.7 "Playfair Display", serif; }
-    .step-copy b { display: block; font-size: 15px; }
-    .step-copy span { color: var(--muted); font-size: 13px; }
-
-    /* CTA and Footer */
-    .visit { position: relative; overflow: hidden; padding: 96px 0; color: #fff; background: var(--navy); text-align: center; }
-    .visit::before, .visit::after { content: ""; position: absolute; width: 370px; height: 370px; border: 1px solid rgba(117,198,232,.21); border-radius: 50%; }
-    .visit::before { top: -225px; left: -90px; }
-    .visit::after { right: -125px; bottom: -235px; }
-    .visit .wrap { position: relative; z-index: 1; }
-    .visit .eyebrow { justify-content: center; color: var(--sky); }
-    .visit .section-title { font-size: clamp(30px, 4vw, 45px); }
-    .visit p:not(.eyebrow) { max-width: 48ch; margin: 19px auto 28px; color: rgba(255,255,255,.73); }
-    .subscribe { display: flex; max-width: 500px; margin: 0 auto; border: 1px solid rgba(255,255,255,.5); }
-    .subscribe input { min-width: 0; flex: 1; padding: 13px 17px; border: 0; outline: none; color: #fff; background: transparent; }
-    .subscribe input::placeholder { color: rgba(255,255,255,.55); }
-    .subscribe button { padding: 0 22px; border: 0; color: var(--navy); background: var(--sand); font-size: 13px; font-weight: 700; white-space: nowrap; }
-    .subscribe button:hover { background: #f0c77f; }
-    footer { color: rgba(255,255,255,.67); background: #031c31; }
-    .footer-top { display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 40px; padding: 58px 0 38px; }
-    .footer-brand { color: #fff; }
-    .footer-brand p { max-width: 31ch; margin: 16px 0 0; font-size: 13px; }
-    .footer-heading { margin: 0 0 15px; color: var(--sky); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
-    .footer-list { margin: 0; padding: 0; list-style: none; font-size: 13px; }
-    .footer-list li + li { margin-top: 8px; }
-    .footer-list a:hover { color: #fff; }
-    .footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding: 17px 0; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.43); font-size: 11px; letter-spacing: .05em; }
-
-    .toast { position: fixed; right: 22px; bottom: 22px; z-index: 20; max-width: min(330px, calc(100% - 44px)); padding: 13px 18px; border-left: 3px solid var(--sand); color: #fff; background: var(--navy); box-shadow: var(--shadow); opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .25s, transform .25s; font-size: 13px; }
-    .toast.show { opacity: 1; transform: translateY(0); }
-
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 820px) {
-      .nav { min-height: 68px; }
-      .menu-toggle { display: block; width: 42px; height: 42px; font-size: 23px; }
-      .nav-links { position: absolute; top: 68px; right: 0; left: 0; display: grid; gap: 0; max-height: 0; overflow: hidden; background: #05233c; transition: max-height .27s ease; }
-      .nav-links.open { max-height: 300px; border-top: 1px solid rgba(255,255,255,.12); }
-      .nav-links a { padding: 13px 24px; border-bottom: 1px solid rgba(255,255,255,.09); }
-      .nav-links .nav-cta { margin: 11px 24px; text-align: center; }
-      .hero, .hero-grid { min-height: 710px; }
-      .hero-grid { grid-template-columns: 1fr; padding-top: 115px; }
-      .hero-art { min-height: 278px; margin-top: -35px; }
-      .sun { right: 14%; width: 114px; height: 114px; }
-      .mountain { width: 82%; height: 92%; }
-      .coffee-vessel { right: 15%; transform: scale(.72); transform-origin: bottom right; }
-      .art-label { top: 44%; right: 1%; }
-      .intro-grid, .brew-grid { grid-template-columns: 1fr; }
-      .intro-stamp { max-width: 510px; width: 100%; }
-      .coffee-grid { grid-template-columns: 1fr 1fr; }
-      .coffee-card:last-child { grid-column: span 2; }
-      .footer-top { grid-template-columns: 1.4fr 1fr; }
-      .footer-brand { grid-column: span 2; }
+      background: radial-gradient(circle, rgba(107, 196, 184, 0.2), transparent 70%);
+      pointer-events: none;
     }
 
-    @media (max-width: 560px) {
-      .wrap { width: min(100% - 34px, 1120px); }
-      .hero, .hero-grid { min-height: 680px; }
-      .hero-grid { padding-top: 100px; padding-bottom: 48px; }
-      .hero-title { font-size: 40px; }
-      .hero-lede { margin: 18px 0 23px; font-size: 14px; }
-      .hero-art { min-height: 240px; }
-      .art-label { display: none; }
-      .scroll-line { bottom: 12px; left: 17px; }
-      .intro, .coffee-section, .brew { padding: 76px 0; }
-      .stamp-circle { width: 245px; height: 245px; }
-      .stamp-card { width: 185px; padding: 16px; }
-      .section-head { display: block; }
-      .section-head .section-copy { margin-top: 15px; }
-      .coffee-grid { grid-template-columns: 1fr; }
-      .coffee-card, .coffee-card:last-child { grid-column: auto; min-height: 330px; }
-      .coffee-content { min-height: 330px; }
-      .brew-visual { min-height: 310px; }
-      .pour-ring { top: 48px; right: 25px; width: 190px; height: 190px; border-width: 27px; }
-      .visit { padding: 76px 0; }
-      .subscribe { display: block; border: 0; }
-      .subscribe input { width: 100%; border: 1px solid rgba(255,255,255,.5); }
-      .subscribe button { width: 100%; min-height: 48px; margin-top: 9px; }
-      .footer-top { grid-template-columns: 1fr; gap: 30px; }
-      .footer-brand { grid-column: auto; }
-      .footer-bottom { display: block; }
-      .footer-bottom span + span { display: block; margin-top: 6px; }
+    .banner-text h4 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 0.05em;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-      .reveal { opacity: 1; transform: none; }
+    .banner-text p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.75;
+      max-width: 620px;
+    }
+
+    .banner-stat {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px 28px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      flex-shrink: 0;
+    }
+
+    .banner-stat .stat-num {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--amber-light);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .banner-stat .stat-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ========================================================
+       味道與感官圖譜 (Flavors, Aroma & Sensory)
+       ======================================================== */
+    .flavor-section {
+      padding: 90px 0;
+    }
+
+    .flavor-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .flavor-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .flavor-item {
+      background: var(--surface-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .flavor-item:hover {
+      border-color: var(--teal-medium);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .flavor-item-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .flavor-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--teal-mist);
+      color: var(--teal-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flavor-item h4 {
+      font-size: 17px;
+      color: var(--teal-deep);
+      font-weight: 700;
+    }
+
+    .flavor-item p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* 右側圖表雷達/指標卡片 */
+    .sensory-panel {
+      background: var(--surface-white);
+      border-radius: var(--radius-lg);
+      padding: 38px 34px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    .panel-header {
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+
+    .panel-header h3 {
+      font-size: 21px;
+      color: var(--teal-deep);
+      font-weight: 700;
+    }
+
+    .panel-header span {
+      font-size: 13px;
+      color: var(--teal-primary);
+    }
+
+    .meter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .meter-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .meter-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .meter-info span:last-child {
+      color: var(--teal-primary);
+    }
+
+    .progress-bar-bg {
+      height: 10px;
+      background: var(--teal-mist);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: linear-gradient(90deg, var(--teal-soft), var(--teal-primary));
+      transition: width 1s ease-in-out;
+    }
+
+    .tea-liquor-note {
+      margin-top: 26px;
+      background: linear-gradient(135deg, rgba(201, 139, 44, 0.08), rgba(66, 169, 157, 0.06));
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 1px solid rgba(201, 139, 44, 0.2);
+    }
+
+    .tea-drop-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--amber-gold);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .liquor-desc h5 {
+      font-size: 14px;
+      color: var(--teal-deep);
+      font-weight: 700;
+    }
+
+    .liquor-desc p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* ========================================================
+       沖泡方法與步驟 (Brewing Guide & Interactive Timer)
+       ======================================================== */
+    .brewing-section {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--teal-mist) 0%, var(--teal-tint) 100%);
+    }
+
+    .brew-tab-nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .brew-tab-btn {
+      padding: 12px 28px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--surface-white);
+      border: 1.5px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brew-tab-btn.active {
+      background: var(--teal-primary);
+      color: #ffffff;
+      border-color: var(--teal-primary);
+      box-shadow: 0 4px 14px rgba(30, 112, 105, 0.25);
+    }
+
+    .brew-content-card {
+      background: var(--surface-white);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+    }
+
+    .brew-tab-panel {
+      display: none;
+    }
+
+    .brew-tab-panel.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .brew-detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .param-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .param-box {
+      background: var(--teal-tint);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px 14px;
+      text-align: center;
+    }
+
+    .param-box .label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .param-box .val {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--teal-deep);
+    }
+
+    .brew-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .step-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--teal-medium);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--teal-deep);
+      margin-bottom: 3px;
+    }
+
+    .step-content p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 互動計時器 */
+    .timer-widget {
+      background: linear-gradient(145deg, #ffffff, var(--teal-mist));
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timer-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--teal-deep);
+      margin-bottom: 6px;
+    }
+
+    .timer-subtitle {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .timer-display {
+      font-size: 60px;
+      font-weight: 800;
+      color: var(--teal-deep);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: 0.05em;
+    }
+
+    .timer-presets {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .preset-btn {
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12.5px;
+      background: var(--surface-white);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .preset-btn.active {
+      background: var(--teal-mist);
+      color: var(--teal-primary);
+      border-color: var(--teal-soft);
+    }
+
+    .timer-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn-timer-start {
+      background: var(--teal-primary);
+      color: #ffffff;
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn-timer-reset {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .timer-hint {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--teal-medium);
+      min-height: 18px;
+    }
+
+    /* ========================================================
+       品茶四步訣 (Four Steps of Tea Appreciation)
+       ======================================================== */
+    .steps-section {
+      padding: 80px 0;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      background: var(--surface-white);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal-soft);
+    }
+
+    .step-circle {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: var(--teal-mist);
+      color: var(--teal-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--teal-pale);
+    }
+
+    .step-card h4 {
+      font-size: 19px;
+      color: var(--teal-deep);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ========================================================
+       常見問答 (FAQ Section)
+       ======================================================== */
+    .faq-section {
+      padding: 80px 0;
+      background: var(--teal-mist);
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--surface-white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .faq-item.active {
+      border-color: var(--teal-soft);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 22px 26px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--teal-deep);
+    }
+
+    .faq-question:hover {
+      color: var(--teal-primary);
+    }
+
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--teal-mist);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal-primary);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+      background: var(--teal-primary);
+      color: #ffffff;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 26px 22px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      border-top: 1px solid rgba(210, 230, 227, 0.4);
+      padding-top: 16px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* ========================================================
+       茶人手札 / 訂閱與交流 (Newsletter CTA)
+       ======================================================== */
+    .newsletter-section {
+      padding: 80px 0;
+    }
+
+    .newsletter-card {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-deep) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .newsletter-card::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(107, 196, 184, 0.18), transparent 70%);
+    }
+
+    .newsletter-card .eyebrow {
+      color: var(--teal-pale);
+    }
+
+    .newsletter-card .eyebrow::before, .newsletter-card .eyebrow::after {
+      background: var(--teal-soft);
+    }
+
+    .newsletter-card h2 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .newsletter-card p {
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      outline: none;
+      font-size: 14.5px;
+      backdrop-filter: blur(8px);
+    }
+
+    .newsletter-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--teal-light);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ========================================================
+       頁腳 (Footer)
+       ======================================================== */
+    .site-footer {
+      background: var(--teal-deep);
+      color: #ffffff;
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand h4 {
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+      max-width: 360px;
+    }
+
+    .footer-col h5 {
+      font-size: 15px;
+      color: var(--teal-pale);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer-links a:hover {
+      color: var(--teal-light);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* 響應式微調 */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-actions, .hero-tags {
+        justify-content: center;
+      }
+      .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .flavor-layout {
+        grid-template-columns: 1fr;
+      }
+      .brew-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu, .nav-cta {
+        display: none;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+      .flavor-cards {
+        grid-template-columns: 1fr;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .param-list {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .legend-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <nav class="nav wrap" aria-label="主要導覽">
-      <a class="brand" href="#top" aria-label="回到藍天咖啡首頁">
-        <span class="brand-mark">B</span>
-        <span>藍天咖啡<small>BLUE SKY COFFEE</small></span>
+
+  <!-- ========================================================
+       頂部導覽列 (Navbar)
+       ======================================================== -->
+  <header class="navbar" id="top">
+    <div class="container navbar-inner">
+      <a href="#top" class="brand-logo" aria-label="東方美人首頁">
+        <div class="brand-icon-box">
+          <!-- 茶葉與露珠圖標 -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.5 9 8.5 9.8V15c-1.5 0-2.5-1-2.5-2.5 0-2 2-3.5 4-3.5s4 1.5 4 3.5c0 1.5-1 2.5-2.5 2.5v6.8C18.5 21 22 17 22 12c0-5.5-4.5-10-10-10z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="serif">東方美人</h1>
+          <span>ORIENTAL BEAUTY</span>
+        </div>
       </a>
-      <button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="navLinks">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#story">我們的堅持</a>
-        <a href="#coffee">本季選豆</a>
-        <a href="#brew">沖煮日常</a>
-        <a class="nav-cta" href="#visit">訂閱風味通信</a>
+
+      <!-- 導覽選單 -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#origin" class="nav-link">茶之緣起</a></li>
+          <li><a href="#flavor" class="nav-link">蜜香韻味</a></li>
+          <li><a href="#brewing" class="nav-link">沖泡之道</a></li>
+          <li><a href="#savoring" class="nav-link">品茶四訣</a></li>
+          <li><a href="#faq" class="nav-link">茶友問答</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#brewing" class="btn btn-primary" style="padding: 10px 22px; font-size: 14px;">體驗沖泡</a>
       </div>
-    </nav>
+
+      <!-- 行動裝置選單按鈕 -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="切換選單">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-grid wrap">
-        <div class="reveal">
-          <p class="eyebrow">HAND BREWED · SLOWLY ROASTED</p>
-          <h1 class="hero-title" id="heroTitle">讓風味，<br>在<span class="blue">藍天</span>下<br>慢慢抵達。</h1>
-          <p class="hero-lede">藍天咖啡為喜歡手沖的你，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有自己的晴朗天氣。</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#coffee">探索本季風味 <span class="arrow">→</span></a>
-            <a class="button button-outline" href="#story">認識藍天</a>
+  <!-- ========================================================
+       Hero 旗艦首頁區 (Hero Section)
+       ======================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow eyebrow-left">
+          <span>台灣珍稀茗品 ‧ 天然蜜韻天成</span>
+        </div>
+        <h2 class="hero-title serif">
+          一葉初綻蜜果香<br>
+          <span class="highlight">東方美人的甘醇時光</span>
+        </h2>
+        <p class="hero-desc">
+          東方美人茶（白毫烏龍），在晨曦山嵐與小綠葉蟬的輕柔刺吸下，孕育出渾然天成的蜜糖甜韻與熟果香。琥珀明澄的茶湯，為每一位愛茶之人帶來安歇心靈的甘美滋味。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#brewing" class="btn btn-primary">
+            <span>探索沖泡方法</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#origin" class="btn btn-outline">
+            <span>細閱茶葉傳奇</span>
+          </a>
+        </div>
+
+        <div class="hero-tags">
+          <div class="hero-tag-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>零農藥友善生態</span>
           </div>
-          <p class="hero-note">TAIPEI · TAIWAN · EST. 2018</p>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="sun"></div>
-          <div class="mountain"></div>
-          <div class="coffee-vessel"><div class="dripper"></div><div class="carafe"></div></div>
-          <p class="art-label"><strong>92°C</strong>理想水溫<br>細細喚醒香氣</p>
-        </div>
-      </div>
-      <p class="scroll-line">SCROLL TO DISCOVER</p>
-    </section>
-
-    <section class="intro" id="story" aria-labelledby="storyTitle">
-      <div class="intro-grid wrap">
-        <div class="intro-stamp reveal" aria-hidden="true">
-          <div class="stamp-circle"><div><strong>慢一點，<br>更清楚。</strong><span>LET THE FLAVOUR SPEAK</span></div></div>
-          <div class="stamp-card"><b>BLUE SKY NOTE</b><p>一杯好咖啡，從來不是匆忙完成的事。</p></div>
-        </div>
-        <div class="reveal">
-          <p class="eyebrow">OUR PHILOSOPHY</p>
-          <h2 class="section-title" id="storyTitle">在一杯之間，<br>看見產地的<em>晴朗</em>。</h2>
-          <p class="section-copy">我們相信，精品咖啡的美好不該被複雜掩蓋。以小批次烘焙留住豆子的個性，再用穩定、誠實的手沖，讓風土與時間在杯中變得清晰。</p>
-          <p class="section-copy">給懂得放慢腳步的人，也給每一個想重新認識咖啡的人。</p>
-          <a class="intro-link" href="#brew">看看我們如何沖煮 <span>→</span></a>
+          <div class="hero-tag-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <span>重發酵 70%~85%</span>
+          </div>
+          <div class="hero-tag-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span>白毫五色顯芳華</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="coffee-section" id="coffee" aria-labelledby="coffeeTitle">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div><p class="eyebrow">SEASONAL SELECTION</p><h2 class="section-title" id="coffeeTitle">今天，想喝哪一片<em>藍天</em>？</h2></div>
-          <p class="section-copy">三款當季單品，為不同的晨光、午後與靜夜而選。</p>
+      <!-- 視覺藝術呈現 -->
+      <div class="hero-visual">
+        <div class="art-frame">
+          <div class="art-glow-ring"></div>
+          
+          <!-- 雅緻茶具與山景 SVG 插畫 -->
+          <svg width="280" height="280" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="teaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3caea3" />
+                <stop offset="100%" stop-color="#14524c" />
+              </linearGradient>
+              <linearGradient id="amberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fcd34d" />
+                <stop offset="100%" stop-color="#c98b2c" />
+              </linearGradient>
+              <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#b2dfdb" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#80cbc4" stop-opacity="0.2"/>
+              </linearGradient>
+            </defs>
+
+            <!-- 遠山青翠 -->
+            <path d="M20 220 C70 140, 130 180, 180 130 C220 90, 260 160, 290 220 Z" fill="url(#mountainGrad)" />
+            <path d="M0 240 C50 170, 110 200, 160 160 C210 120, 250 190, 300 240 Z" fill="#d6eeeb" opacity="0.7"/>
+
+            <!-- 琥珀茶席湯泉水面 -->
+            <ellipse cx="150" cy="225" rx="100" ry="24" fill="url(#amberGradient)" opacity="0.35"/>
+            <ellipse cx="150" cy="225" rx="75" ry="16" fill="url(#amberGradient)" opacity="0.5"/>
+
+            <!-- 雅緻白瓷茶杯 -->
+            <path d="M105 185 C105 230, 195 230, 195 185 L185 185 C185 220, 115 220, 115 185 Z" fill="#ffffff" stroke="#cde4e1" stroke-width="2"/>
+            <ellipse cx="150" cy="186" rx="42" ry="10" fill="url(#amberGradient)"/>
+
+            <!-- 茶葉翩躚飛舞（象徵白毫嫩芽） -->
+            <path d="M148 155 C135 125, 162 105, 142 80 C130 102, 138 135, 148 155 Z" fill="url(#teaGradient)"/>
+            <path d="M148 155 C146 128, 142 108, 142 80" stroke="#a7f3d0" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- 小葉芽點綴 -->
+            <path d="M165 140 C175 120, 192 125, 190 108 C176 116, 172 130, 165 140 Z" fill="#2a8a81"/>
+            <path d="M130 145 C120 130, 105 136, 108 120 C118 125, 124 138, 130 145 Z" fill="#42a99d"/>
+
+            <!-- 裊裊茶香蒸氣 -->
+            <path d="M140 175 Q135 160 145 145 T140 120" stroke="rgba(201, 139, 44, 0.4)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M158 172 Q165 158 155 142 T160 115" stroke="rgba(201, 139, 44, 0.3)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
         </div>
-        <div class="coffee-grid">
-          <article class="coffee-card reveal">
-            <div class="coffee-content">
-              <span class="coffee-number">01 / BRIGHT</span>
-              <p class="coffee-origin">ETHIOPIA · YIRGACHEFFE</p>
-              <h3>衣索比亞<br>耶加雪菲</h3>
-              <p class="coffee-notes">白花、佛手柑、蜂蜜</p>
-              <div class="coffee-bottom"><span class="price">NT$ 520 / 200g</span><button class="add-button" type="button" data-coffee="衣索比亞・耶加雪菲">加入收藏 ＋</button></div>
+
+        <!-- 浮動亮點標籤 1 -->
+        <div class="floating-card card-one">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <strong>小綠葉蟬「著涎」</strong>
+            <span>純天然大自然點化</span>
+          </div>
+        </div>
+
+        <!-- 浮動亮點標籤 2 -->
+        <div class="floating-card card-two">
+          <div class="badge-icon" style="background: var(--honey-soft); color: var(--amber-gold);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <strong>琥珀橙紅湯色</strong>
+            <span>天然濃郁蜜果香</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       特色概覽 (Highlights Section)
+       ======================================================== */
+  -->
+  <section class="highlights">
+    <div class="container">
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <div class="card-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 0 0-7 17.1L12 22l7-2.9A10 10 0 0 0 12 2z"/>
+              <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+            </svg>
+          </div>
+          <h3 class="serif">得天獨厚風土</h3>
+          <p>產於台灣新竹北埔、峨眉及苗栗山區，丘陵環繞、濕潤朝霧，為茶樹滋長提供極佳環境。</p>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="serif">絕不施用農藥</h3>
+          <p>唯有完全不噴灑化學農藥的生態茶園，小綠葉蟬才能繁衍吸吮，每一片茶葉皆是純淨保證。</p>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12h20M12 2v20"/>
+              <circle cx="12" cy="12" r="7"/>
+            </svg>
+          </div>
+          <h3 class="serif">五色斑斕葉相</h3>
+          <p>茶芽白毫顯著，葉身呈現白、綠、黃、紅、褐五色相間，宛如花朵盛開，故稱白毫烏龍。</p>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="1" x2="6" y2="4"/>
+              <line x1="10" y1="1" x2="10" y2="4"/>
+              <line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <h3 class="serif">甘潤柔滑不澀</h3>
+          <p>發酵程度高達 70%~85%，苦澀感降至極低，入口甘潤生津，即使初入門茶友亦能深陷其魅力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶之由來與傳奇故事 (The Origin & Legend)
+       ======================================================== -->
+  <section class="origin-section" id="origin">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>文化傳承 ‧ 歲月沈澱</span>
+        </div>
+        <h2 class="section-title serif">
+          由來與傳奇：<em>名字背後的動人篇章</em>
+        </h2>
+        <p class="section-subtitle">
+          從客家茶農的無心插柳，到大英帝國女王的水晶杯，東方美人茶以一段段驚奇的傳奇走進世界茶史。
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <!-- 傳奇故事 1 -->
+        <div class="story-card">
+          <span class="story-num">01</span>
+          <span class="story-tag">皇室賜名</span>
+          <h3 class="serif">維多利亞女王的水晶杯</h3>
+          <p>
+            相傳在十九世紀，英國洋行將此台灣重發酵茶獻給英國女王維多利亞。女王將茶葉沖入水晶高腳杯中，只見紅綠相間的茶葉在清透茶湯中緩緩舒展、翩翩起舞，宛如一位東方絕代佳人在水中曼舞，女王讚嘆不已，遂賜名為「東方美人」。
+          </p>
+          <div class="story-quote">
+            「茶葉在水晶杯中輕靈舒展，恰似東方仙子舞動羽衣。」
+          </div>
+        </div>
+
+        <!-- 傳奇故事 2 -->
+        <div class="story-card">
+          <span class="story-num">02</span>
+          <span class="story-tag">客家風情</span>
+          <h3 class="serif">北埔鄉野的「膨風茶」傳說</h3>
+          <p>
+            早期台灣北部茶園遭逢蟲害，茶芽被小綠葉蟬咬食枯黃。辛勤的客家茶農不捨心血白費，仍將受損茶芽採摘烘製成茶，挑至台北城大稻埕洋行販售。不料洋行驚為天人，以高於一般茶葉數倍的價格全數收購。茶農回鄉告知眾人，鄉親皆以為他在吹牛（客家話稱「膨風」），故被戲稱為「膨風茶」。
+          </p>
+          <div class="story-quote">
+            「吹牛成真，化蟲害為舉世無雙之瑰寶。」
+          </div>
+        </div>
+
+        <!-- 傳奇故事 3 -->
+        <div class="story-card">
+          <span class="story-num">03</span>
+          <span class="story-tag">自然奇蹟</span>
+          <h3 class="serif">小綠葉蟬的生態點化之禮</h3>
+          <p>
+            這獨特的蜜香不是人工香精，而是大自然的鬼斧神工。當茶樹嫩芽被小綠葉蟬（小綠浮塵子）叮咬刺吸後，植物為了自衛啟動免疫機制，合成出單萜烯二醇類等芳香分子，經過製茶師精心日光萎凋與重度攪拌發酵，最終凝練成難以複製的純淨熟果香與蜜糖清韻。
+          </p>
+          <div class="story-quote">
+            「蟲茶共生，造就無可取代的天然著涎之味。」
+          </div>
+        </div>
+      </div>
+
+      <!-- 橫幅亮點 -->
+      <div class="legend-banner">
+        <div class="banner-text">
+          <h4 class="serif">別名繁多，一茶多貌的東方瑰寶</h4>
+          <p>
+            在不同年代與領域，東方美人有著不同的美麗名字：因白毫顯著而稱「白毫烏龍」；因產於芒種至端午而稱「涎仔茶」；因外銷歐洲身價不凡而稱「番庄烏龍」。無論名字如何更迭，其天然甘美的靈魂始終如一。
+          </p>
+        </div>
+        <div class="banner-stat">
+          <span class="stat-num">5 Colors</span>
+          <span class="stat-label">白、綠、黃、紅、褐</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       味道與感官圖譜 (Flavor & Sensory)
+       ======================================================== -->
+  <section class="flavor-section" id="flavor">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>感官品鑑 ‧ 風味綻放</span>
+        </div>
+        <h2 class="section-title serif">
+          極致風味：<em>熟果與蜜香的層次交織</em>
+        </h2>
+        <p class="section-subtitle">
+          東方美人茶以其濃郁而細膩的風味特色聞名遐邇，每一口茶湯都訴說著自然的純粹。
+        </p>
+      </div>
+
+      <div class="flavor-layout">
+        <!-- 左側風味特徵卡片 -->
+        <div class="flavor-cards">
+          <div class="flavor-item">
+            <div class="flavor-item-header">
+              <div class="flavor-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+                  <path d="M8 12s1.5 2 4 2 4-2 4-2"/>
+                </svg>
+              </div>
+              <h4>天然蜜香</h4>
             </div>
-          </article>
-          <article class="coffee-card reveal">
-            <div class="coffee-content">
-              <span class="coffee-number">02 / JUICY</span>
-              <p class="coffee-origin">KENYA · KIRINYAGA</p>
-              <h3>肯亞<br>祈安布</h3>
-              <p class="coffee-notes">黑醋栗、洛神、葡萄柚</p>
-              <div class="coffee-bottom"><span class="price">NT$ 580 / 200g</span><button class="add-button" type="button" data-coffee="肯亞・祈安布">加入收藏 ＋</button></div>
+            <p>入口即能感受到若隱若現的天然龍眼蜜與野花蜜甘甜，無糖自甜，清雅而不膩口。</p>
+          </div>
+
+          <div class="flavor-item">
+            <div class="flavor-item-header">
+              <div class="flavor-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                </svg>
+              </div>
+              <h4>熟成果韻</h4>
             </div>
-          </article>
-          <article class="coffee-card reveal">
-            <div class="coffee-content">
-              <span class="coffee-number">03 / ROUND</span>
-              <p class="coffee-origin">COLOMBIA · HUILA</p>
-              <h3>哥倫比亞<br>慧蘭</h3>
-              <p class="coffee-notes">黃桃、焦糖、可可尾韻</p>
-              <div class="coffee-bottom"><span class="price">NT$ 460 / 200g</span><button class="add-button" type="button" data-coffee="哥倫比亞・慧蘭">加入收藏 ＋</button></div>
+            <p>帶有白桃、成熟李子與麝香葡萄般的溫潤果香，層次豐富，隨著溫度變化展現不同深度。</p>
+          </div>
+
+          <div class="flavor-item">
+            <div class="flavor-item-header">
+              <div class="flavor-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h4>滑順零澀</h4>
             </div>
-          </article>
+            <p>得益於重度發酵工藝，茶多酚充分氧化，茶湯溫和絲滑，幾乎感受不到一般生茶的苦澀。</p>
+          </div>
+
+          <div class="flavor-item">
+            <div class="flavor-item-header">
+              <div class="flavor-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <h4>深邃喉韻</h4>
+            </div>
+            <p>飲後兩頰生津，甘甜如泉湧，蜜果香氣在呼吸間縈繞不散，回甘持久悠長。</p>
+          </div>
+        </div>
+
+        <!-- 右側品飲指標量表面板 -->
+        <div class="sensory-panel">
+          <div class="panel-header">
+            <h3 class="serif">專業品茗指標評測</h3>
+            <span>TEA SOMMELIER PROFILE</span>
+          </div>
+
+          <div class="meter-group">
+            <div class="meter-item">
+              <div class="meter-info">
+                <span>發酵程度 (Fermentation)</span>
+                <span>75% ~ 85%（重度發酵）</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+
+            <div class="meter-item">
+              <div class="meter-info">
+                <span>蜜香濃郁度 (Honey Aroma)</span>
+                <span>★★★★★ 極高</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="meter-item">
+              <div class="meter-info">
+                <span>烘焙程度 (Roasting Level)</span>
+                <span>輕火 / 乾燥提香</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-fill" style="width: 25%;"></div>
+              </div>
+            </div>
+
+            <div class="meter-item">
+              <div class="meter-info">
+                <span>回甘持久度 (Sweet Aftertaste)</span>
+                <span>★★★★★ 悠長</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tea-liquor-note">
+            <div class="tea-drop-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+            <div class="liquor-desc">
+              <h5>琥珀如金 ‧ 澄澈明亮</h5>
+              <p>標準東方美人茶湯呈現明豔的琥珀橙紅色，杯底留香持久，是視覺與嗅覺的雙重饗宴。</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="brew" id="brew" aria-labelledby="brewTitle">
-      <div class="brew-grid wrap">
-        <div class="brew-visual reveal" aria-hidden="true">
-          <div class="pour-ring"></div><div class="brew-v60"></div><p class="brew-caption">V60 / 15G : 240ML<br>2'45''</p>
+  <!-- ========================================================
+       沖泡方法與步驟指南 (Brewing Guide & Interactive Timer)
+       ======================================================== -->
+  <section class="brewing-section" id="brewing">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>匠心沖泡 ‧ 喚醒茶魂</span>
         </div>
-        <div class="reveal">
-          <p class="eyebrow">A QUIET RITUAL</p>
-          <h2 class="section-title" id="brewTitle">把時間交給水，<br>讓咖啡說<em>自己的話</em>。</h2>
-          <p class="section-copy">不需要繁複儀式，只要三個安靜的步驟。每一個參數，都是為了讓你更靠近豆子原本的樣子。</p>
-          <ol class="brew-steps">
-            <li><span class="step-no">01</span><span class="step-copy"><b>研磨，先聞見期待</b><span>15g 中細研磨，讓香氣從指尖開始展開。</span></span></li>
-            <li><span class="step-no">02</span><span class="step-copy"><b>悶蒸，等待第一個呼吸</b><span>以 92°C 熱水浸潤 30 秒，喚醒甜感與層次。</span></span></li>
-            <li><span class="step-no">03</span><span class="step-copy"><b>注水，保持自己的節奏</b><span>穩定畫圈，讓 240ml 的清澈在 2 分 45 秒完成。</span></span></li>
-          </ol>
+        <h2 class="section-title serif">
+          沖泡指南：<em>水溫與時間的藝術</em>
+        </h2>
+        <p class="section-subtitle">
+          東方美人茶芽葉細嫩且富含蜜香精華，掌握適當的水溫與浸泡時間，方能激發其最佳風采。
+        </p>
+      </div>
+
+      <!-- 沖泡切換頁籤 -->
+      <div class="brew-tab-nav">
+        <button class="brew-tab-btn active" data-tab="kungfu">傳統功夫泡法</button>
+        <button class="brew-tab-btn" data-tab="cold">清爽冷泡法</button>
+        <button class="brew-tab-btn" data-tab="office">日常馬克杯泡</button>
+      </div>
+
+      <!-- 頁籤內容面板 -->
+      <div class="brew-content-card">
+        <!-- 功夫泡法 -->
+        <div class="brew-tab-panel active" id="tab-kungfu">
+          <div class="brew-detail-grid">
+            <div class="brew-guide-left">
+              <div class="param-list">
+                <div class="param-box">
+                  <span class="label">建議水溫</span>
+                  <span class="val">80 - 85°C</span>
+                </div>
+                <div class="param-box">
+                  <span class="label">茶水比例</span>
+                  <span class="val">1 : 40~50</span>
+                </div>
+                <div class="param-box">
+                  <span class="label">耐泡次數</span>
+                  <span class="val">5 - 6 回沖</span>
+                </div>
+              </div>
+
+              <div class="brew-steps">
+                <div class="step-item">
+                  <div class="step-badge">1</div>
+                  <div class="step-content">
+                    <h5>溫壺燙杯</h5>
+                    <p>以熱水注入瓷壺或蓋碗溫熱器具，提升器皿溫度，有助於後續香氣聚攏。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">2</div>
+                  <div class="step-content">
+                    <h5>投茶與聞乾香</h5>
+                    <p>投入約 3~5 克茶葉，輕輕搖晃茶壺，利用餘溫喚醒乾茶中高雅的蜜果香。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">3</div>
+                  <div class="step-content">
+                    <h5>注水控溫 (80°C~85°C)</h5>
+                    <p>切忌用 100°C 滾沸水直沖！宜稍微降溫後沿壺邊環繞注水，保護細嫩白毫。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">4</div>
+                  <div class="step-content">
+                    <h5>出湯享用</h5>
+                    <p>第一泡約 45 秒出湯；第二泡約 35 秒；第三泡 45 秒，後續每泡遞增 15 秒。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 互動式沖泡計時小工具 -->
+            <div class="timer-widget">
+              <div class="timer-title">東方美人 ‧ 專屬品茗計時器</div>
+              <div class="timer-subtitle">掌控時間，品味每一泡茶湯的黃金滋味</div>
+              <div class="timer-display" id="timerDisplay">00:45</div>
+              
+              <div class="timer-presets">
+                <button class="preset-btn active" data-time="45">第一泡 (45秒)</button>
+                <button class="preset-btn" data-time="35">第二泡 (35秒)</button>
+                <button class="preset-btn" data-time="50">第三泡 (50秒)</button>
+                <button class="preset-btn" data-time="70">第四泡 (70秒)</button>
+              </div>
+
+              <div class="timer-controls">
+                <button class="btn btn-timer-start" id="timerStartBtn">開始計時</button>
+                <button class="btn btn-timer-reset" id="timerResetBtn">重置</button>
+              </div>
+              <div class="timer-hint" id="timerHint">點擊開始計時，茶湯完成時將發出悅耳提示聲</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 清爽冷泡法 -->
+        <div class="brew-tab-panel" id="tab-cold">
+          <div class="brew-detail-grid">
+            <div class="brew-guide-left">
+              <div class="param-list">
+                <div class="param-box">
+                  <span class="label">水質要求</span>
+                  <span class="val">常溫冷開水</span>
+                </div>
+                <div class="param-box">
+                  <span class="label">茶水比例</span>
+                  <span class="val">1 : 100 (5g:500ml)</span>
+                </div>
+                <div class="param-box">
+                  <span class="label">冷藏靜置</span>
+                  <span class="val">6 - 8 小時</span>
+                </div>
+              </div>
+
+              <div class="brew-steps">
+                <div class="step-item">
+                  <div class="step-badge">1</div>
+                  <div class="step-content">
+                    <h5>選用潔淨冷水瓶</h5>
+                    <p>準備 500ml 的玻璃瓶或環保冷水壺，確保壺內乾淨無異味。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">2</div>
+                  <div class="step-content">
+                    <h5>投入 5g 東方美人茶</h5>
+                    <p>將 5 克原葉放入瓶中，可適度保留完整芽葉，觀看冷水緩慢萃取。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">3</div>
+                  <div class="step-content">
+                    <h5>低溫冷藏 6~8 小時</h5>
+                    <p>置於冰箱冷藏庫，低溫能抑制單寧酸與咖啡因釋出，將蜜糖甜感極大化。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">4</div>
+                  <div class="step-content">
+                    <h5>濾出清甜茶湯</h5>
+                    <p>倒出即可享用沁涼透心的蜜香冷茶，是炎夏與午後的絕妙消暑伴侶。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timer-widget">
+              <div class="timer-title">冷泡特色說明</div>
+              <div class="timer-subtitle">甘甜不澀 ‧ 清涼蜜韻</div>
+              <div style="padding: 20px 0; text-align: left; font-size: 14px; color: var(--text-muted); line-height: 1.8;">
+                <p>🔹 <strong>低咖啡因更安心</strong>：低溫浸潤使咖啡因釋放減少，夜晚飲用也不易影響睡眠。</p>
+                <p style="margin-top: 10px;">🔹 <strong>蜜香更顯純粹</strong>：冷泡使果香與蜜糖風味特別明亮清澈，甜味格外明顯。</p>
+                <p style="margin-top: 10px;">🔹 <strong>外出隨行首選</strong>：前一晚放入冰箱，隔天上班上學即可輕鬆攜帶一整天的清香甘露。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 日常馬克杯泡 -->
+        <div class="brew-tab-panel" id="tab-office">
+          <div class="brew-detail-grid">
+            <div class="brew-guide-left">
+              <div class="param-list">
+                <div class="param-box">
+                  <span class="label">建議水溫</span>
+                  <span class="val">85°C 左右</span>
+                </div>
+                <div class="param-box">
+                  <span class="label">投茶量</span>
+                  <span class="val">約 2.5 - 3 克</span>
+                </div>
+                <div class="param-box">
+                  <span class="label">浸泡時間</span>
+                  <span class="val">2 - 3 分鐘</span>
+                </div>
+              </div>
+
+              <div class="brew-steps">
+                <div class="step-item">
+                  <div class="step-badge">1</div>
+                  <div class="step-content">
+                    <h5>取用日常馬克杯</h5>
+                    <p>推薦使用 300~350ml 附濾網的瓷杯或玻璃杯，便於分離茶葉。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">2</div>
+                  <div class="step-content">
+                    <h5>熱水稍降溫後注入</h5>
+                    <p>沸水靜置約 2~3 分鐘待溫度降至 85°C 左右，緩緩注入杯中。</p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-badge">3</div>
+                  <div class="step-content">
+                    <h5>靜置 2~3 分鐘提濾網</h5>
+                    <p>看著茶葉慢慢伸展，待茶湯轉為清亮琥珀色時拿起濾網，即可啜飲。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timer-widget">
+              <div class="timer-title">辦公與書房茶席</div>
+              <div class="timer-subtitle">忙碌中片刻的雅緻喘息</div>
+              <div style="padding: 20px 0; text-align: left; font-size: 14px; color: var(--text-muted); line-height: 1.8;">
+                <p>🔹 即使沒有繁複茶具，也能在桌前享受頂級茶韻。</p>
+                <p style="margin-top: 10px;">🔹 茶葉耐泡度高，第一次喝完後可再續注溫水回沖 2~3 次，香氣依然淡雅動人。</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="visit" id="visit" aria-labelledby="visitTitle">
-      <div class="wrap reveal">
-        <p class="eyebrow">THE BLUE SKY LETTER</p>
-        <h2 class="section-title" id="visitTitle">把下一杯好咖啡，<br>寄到你的日常裡。</h2>
-        <p>每月一封風味通信，分享新豆、沖煮靈感與只給會員的小小驚喜。</p>
-        <form class="subscribe" id="subscribeForm">
-          <input type="email" aria-label="電子郵件地址" placeholder="留下你的 Email" required>
-          <button type="submit">訂閱風味通信</button>
+  <!-- ========================================================
+       品茶四步訣 (Four Steps of Tea Appreciation)
+       ======================================================== -->
+  <section class="steps-section" id="savoring">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>慢活儀式 ‧ 五感相通</span>
+        </div>
+        <h2 class="section-title serif">
+          品茶四訣：<em>深入體會東方美人之美</em>
+        </h2>
+        <p class="section-subtitle">
+          放慢呼吸與腳步，藉由「觀、聞、品、察」四道步驟，感受天地與茶人合一的恬靜意境。
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M2 12c3-6 7-9 10-9s7 3 10 9-3 6-10 6-7-3-10-6z"/>
+            </svg>
+          </div>
+          <h4 class="serif">壹 ‧ 觀其色</h4>
+          <p>
+            注視茶湯由金黃漸轉琥珀橙紅，澄澈透明、宛如液態流金。五色茶葉在杯中婆娑起舞，姿態秀雅。
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 4 3 8 7 9.5"/>
+              <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+            </svg>
+          </div>
+          <h4 class="serif">貳 ‧ 聞其香</h4>
+          <p>
+            端杯輕嗅杯面熱香，再探杯底冷香。天然蜜糖香氣撲鼻而來，伴隨成熟蜜桃與花果的深邃餘香。
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h4 class="serif">參 ‧ 品其味</h4>
+          <p>
+            小啜一小口，伴隨微量空氣吸入口中，讓茶湯於舌面迴轉。滑順圓潤，不苦不澀，喉間甘韻連綿。
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <h4 class="serif">肆 ‧ 察葉底</h4>
+          <p>
+            品飲後細觀舒展的葉底，柔嫩柔軟、綠葉紅鑲邊且白毫依然分明，印證茶葉天然上乘的無偽品質。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶友問答 (FAQ Section)
+       ======================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span>解答惑問 ‧ 深化茶知</span>
+        </div>
+        <h2 class="section-title serif">
+          茶友問答：<em>常見迷思與解析</em>
+        </h2>
+        <p class="section-subtitle">
+          為愛茶之人梳理關於東方美人的必備知識，輕鬆享受每一杯好茶。
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>為什麼東方美人茶完全不能噴灑任何農藥？</span>
+            <div class="faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            因為東方美人茶獨一無二的蜜果香，必須依賴「小綠葉蟬」吸吮茶樹幼芽嫩葉（俗稱「著涎」）。若茶園施用任何化學農藥，小綠葉蟬便無法生存繁衍，也就無法產生促使茶葉自體合成蜜香的天然防禦酶。因此，東方美人茶園必定是零農藥施用的生態友善淨土。
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>為什麼東方美人茶會有天然蜂蜜的味道？是不是添加了糖或蜜？</span>
+            <div class="faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            絕對沒有添加任何蜂蜜或香精！這是茶芽在被小綠葉蟬刺吸後，啟動自體防禦機制產生的特殊香氣化合物（包括沉香醇氧化物與單萜烯二醇類等），再經過專業製茶師長時間日光萎凋與重度攪拌發酵，天然化育出的純粹蜜果香氣。
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>為什麼沖泡水溫建議使用 80°C~85°C，而不是 100°C 沸水？</span>
+            <div class="faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            東方美人茶原料主要採摘自細嫩幼芽（心芽），白毫密佈。如果直接用 100°C 滾水猛烈沖泡，高溫會燙傷細嫩葉芽組織，甚至破壞高沸點的優雅蜜香物質。降溫至 80°C~85°C 沖泡，茶湯最為甘甜圓潤，能完整保存細膩的花果蜜韻。
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>晚上喝東方美人茶容易失眠嗎？咖啡因會很高嗎？</span>
+            <div class="faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            東方美人茶發酵度高達 70%~85%，茶性十分溫和不傷胃。雖然白毫幼芽咖啡因稍微豐富，但經重發酵與茶黃素、茶紅素結合後，刺激性大幅降低。若對咖啡因較敏感的茶友，推薦採用低溫冷泡法，低溫萃取時咖啡因釋出極少，既能享受蜜甜滋味，又無睡眠負擔。
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>開封後的東方美人茶該如何妥善保存？</span>
+            <div class="faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            請放置於乾燥、避光、密封、常溫且無異味的陰涼環境。東方美人茶不建議放入一般冰箱存放，因冰箱濕氣與異味容易滲入茶葉。密封良好常溫存放即可，甚至在存放一至兩年後，茶湯風味會轉化得更為圓融醇厚。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       茶人手札 / 訂閱與交流 (Newsletter CTA)
+       ======================================================== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="eyebrow">
+          <span>茶友同好 ‧ 靜心以待</span>
+        </div>
+        <h2 class="serif">訂閱茶季手札，與好茶不期而遇</h2>
+        <p>
+          每年芒種至端午，大自然在茶園悄然醞釀蜜香奇蹟。留下您的電子郵件，我們將在每季新茶採收與茶席活動時，第一時間與您分享第一手茶事與品鑑心得。
+        </p>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感謝您的訂閱！我們將為您寄送最新的東方美人茶香手札。');">
+          <input type="email" class="newsletter-input" placeholder="請輸入您的電子信箱..." required>
+          <button type="submit" class="btn btn-accent">即刻訂閱</button>
         </form>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-top wrap">
-      <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">B</span><span>藍天咖啡<small>BLUE SKY COFFEE</small></span></a><p>為喜愛手沖咖啡的你，留下一段慢慢品味、微微放晴的時間。</p></div>
-      <div><p class="footer-heading">EXPLORE</p><ul class="footer-list"><li><a href="#story">我們的堅持</a></li><li><a href="#coffee">本季選豆</a></li><li><a href="#brew">沖煮日常</a></li></ul></div>
-      <div><p class="footer-heading">CONTACT</p><ul class="footer-list"><li><a href="mailto:hello@bluesky.coffee">hello@bluesky.coffee</a></li><li>台北市大安區晴朗路 18 號</li><li>每日 10:00 — 19:00</li></ul></div>
     </div>
-    <div class="footer-bottom wrap"><span>© 2026 BLUE SKY COFFEE. ALL RIGHTS RESERVED.</span><span>BREW SLOW · LIVE BRIGHT</span></div>
+  </section>
+
+  <!-- ========================================================
+       頁腳 (Footer)
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="serif">東方美人 ‧ ORIENTAL BEAUTY</h4>
+          <p>
+            源自台灣新竹北埔、峨眉與苗栗的珍稀名茶。敬畏自然、友善土地，將小綠葉蟬賜予的甘醇蜜果香氣，溫柔傳遞給世界每一位熱愛茶文化的知音。
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>探索指引</h5>
+          <ul class="footer-links">
+            <li><a href="#origin">茶之由來與傳奇</a></li>
+            <li><a href="#flavor">獨特風味與感官指標</a></li>
+            <li><a href="#brewing">三種沖泡方式教學</a></li>
+            <li><a href="#savoring">品茶四訣生活美學</a></li>
+            <li><a href="#faq">茶友常見問題解答</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>產區風土</h5>
+          <ul class="footer-links">
+            <li><a href="#origin">新竹北埔 ‧ 客家茶鄉風情</a></li>
+            <li><a href="#origin">新竹峨眉 ‧ 大埔水庫湖光山色</a></li>
+            <li><a href="#origin">苗栗銅鑼 ‧ 丘陵朝霧氣候</a></li>
+            <li><a href="#top">回頁面頂端 ↑</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 東方美人茶文化專題介紹. All rights reserved.</div>
+        <div>清新藍綠風格設計 ‧ 傳遞純粹茶香之美</div>
+      </div>
+    </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!-- ========================================================
+       互動腳本 (JavaScript: Tabs, Timer with Audio, FAQ)
+       ======================================================== -->
   <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', open);
-      menuToggle.setAttribute('aria-label', open ? '關閉導覽選單' : '開啟導覽選單');
-      menuToggle.textContent = open ? '×' : '☰';
-    });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', '開啟導覽選單');
-      menuToggle.textContent = '☰';
-    }));
+    // --- 1. 沖泡方式頁籤切換 ---
+    const brewTabs = document.querySelectorAll('.brew-tab-btn');
+    const brewPanels = document.querySelectorAll('.brew-tab-panel');
 
-    const toast = document.getElementById('toast');
-    let toastTimer;
-    function showToast(message) {
-      window.clearTimeout(toastTimer);
-      toast.textContent = message;
-      toast.classList.add('show');
-      toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2600);
+    brewTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        brewTabs.forEach(t => t.classList.remove('active'));
+        brewPanels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetId = `tab-${tab.dataset.tab}`;
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      });
+    });
+
+    // --- 2. 互動沖泡計時器 ---
+    let timerDuration = 45;
+    let timerRemaining = 45;
+    let timerInterval = null;
+    let isTimerRunning = false;
+
+    const timerDisplay = document.getElementById('timerDisplay');
+    const timerStartBtn = document.getElementById('timerStartBtn');
+    const timerResetBtn = document.getElementById('timerResetBtn');
+    const timerHint = document.getElementById('timerHint');
+    const presetBtns = document.querySelectorAll('.preset-btn');
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
     }
-    document.querySelectorAll('[data-coffee]').forEach(button => button.addEventListener('click', () => {
-      showToast(`已將「${button.dataset.coffee}」加入你的收藏。`);
-    }));
-    document.getElementById('subscribeForm').addEventListener('submit', event => {
-      event.preventDefault();
-      event.currentTarget.reset();
-      showToast('謝謝訂閱，下一封晴朗的風味通信即將寄出。');
-    });
 
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const revealItems = document.querySelectorAll('.reveal');
-    if (reducedMotion || !('IntersectionObserver' in window)) {
-      revealItems.forEach(item => item.classList.add('visible'));
-    } else {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
+    function updateDisplay() {
+      timerDisplay.textContent = formatTime(timerRemaining);
+    }
+
+    // 播放清脆悅耳的茶鐘音效 (使用 Web Audio API，無需外掛音檔)
+    function playChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+
+        // 雙音和弦 (528Hz & 880Hz)
+        [528, 880].forEach((freq, index) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+
+          const startTime = ctx.currentTime + (index * 0.12);
+          gain.gain.setValueAtTime(0, startTime);
+          gain.gain.linearRampToValueAtTime(0.3, startTime + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.0001, startTime + 1.8);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(startTime);
+          osc.stop(startTime + 1.8);
         });
-      }, { threshold: .12 });
-      revealItems.forEach(item => observer.observe(item));
+      } catch (e) {
+        console.log("Audio play prevented: ", e);
+      }
     }
+
+    function startTimer() {
+      if (isTimerRunning) {
+        // 暫停
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        timerStartBtn.textContent = '繼續計時';
+        timerHint.textContent = '計時已暫停';
+      } else {
+        // 開始
+        isTimerRunning = true;
+        timerStartBtn.textContent = '暫停';
+        timerHint.textContent = '沖泡計時中，請靜候茶葉芬芳釋放...';
+
+        timerInterval = setInterval(() => {
+          if (timerRemaining > 0) {
+            timerRemaining--;
+            updateDisplay();
+          } else {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            timerStartBtn.textContent = '重新計時';
+            timerHint.innerHTML = '<strong style="color: #c98b2c;">✨ 茶香已達黃金時刻，請及時出湯出茶！</strong>';
+            playChime();
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      timerRemaining = timerDuration;
+      updateDisplay();
+      timerStartBtn.textContent = '開始計時';
+      timerHint.textContent = '計時已重置';
+    }
+
+    timerStartBtn.addEventListener('click', startTimer);
+    timerResetBtn.addEventListener('click', resetTimer);
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        timerDuration = parseInt(btn.dataset.time, 10);
+        resetTimer();
+      });
+    });
+
+    // --- 3. FAQ 手風琴摺疊 ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const questionBtn = item.querySelector('.faq-question');
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // 點擊已展開項目則收起，點擊其他項目則展開自身
+        faqItems.forEach(f => f.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // --- 4. 行動版選單切換 ---
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      const isVisible = navMenu.style.display === 'flex';
+      if (isVisible) {
+        navMenu.style.display = 'none';
+      } else {
+        navMenu.style.display = 'flex';
+        navMenu.style.flexDirection = 'column';
+        navMenu.style.position = 'absolute';
+        navMenu.style.top = '78px';
+        navMenu.style.left = '0';
+        navMenu.style.right = '0';
+        navMenu.style.background = '#ffffff';
+        navMenu.style.padding = '20px 24px';
+        navMenu.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+        navMenu.style.borderBottom = '1px solid #d2e6e3';
+      }
+    });
+
+    // 點擊行動版連結自動收起選單
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navMenu.style.display = 'none';
+        }
+      });
+    });
   </script>
 </body>
 </html>
