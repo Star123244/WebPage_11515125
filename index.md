@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>網站首頁</title>
+    <title>https://star123244.github.io/WebPage_11515125/</title>
 
     <style>
         button {
@@ -25,18 +25,22 @@
 
 <body>
 
-    <h1>網站首頁</h1>
+    <h1>https://star123244.github.io/WebPage_11515125/</h1>
 
-    <button onclick="location.href='./0001/index.html'">
+    <button onclick="location.href='./onepage/index.html'">
         網站 0001
     </button>
 
-    <button onclick="location.href='./0002/index.html'">
+    <button onclick="location.href='./onepage1/index.html'">
         網站 0002
     </button>
 
-    <button onclick="location.href='./0003/index.html'">
+    <button onclick="location.href='./onepage2/index.html'">
         網站 0003
+    </button>
+
+    <button onclick="location.href='./onepage3/index.html'">
+        網站 0004
     </button>
 
 </body>
