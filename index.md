@@ -28,19 +28,19 @@
     <h1>https://star123244.github.io/WebPage_11515125/</h1>
 
     <button onclick="location.href='./onepage/index.html'">
-        網站 0001
+        網站 onepage
     </button>
 
     <button onclick="location.href='./onepage1/index.html'">
-        網站 0002
+        網站 onepage1
     </button>
 
     <button onclick="location.href='./onepage2/index.html'">
-        網站 0003
+        網站 onepage2
     </button>
 
     <button onclick="location.href='./onepage3/index.html'">
-        網站 0004
+        網站 onepage3
     </button>
 
 </body>
