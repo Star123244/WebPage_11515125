@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgContact" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF6EC"/>
+      <stop offset="100%" stop-color="#E1EFE0"/>
+    </linearGradient>
+    <linearGradient id="lanternGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5DC"/>
+      <stop offset="100%" stop-color="#F2C87A"/>
+    </linearGradient>
+    <filter id="softContactShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#163B27" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="400" rx="16" fill="url(#bgContact)"/>
+
+  <!-- Warm Tea Room Architectural Elements -->
+  <rect x="50" y="30" width="500" height="340" rx="12" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="65" y="45" width="470" height="310" rx="8" fill="none" stroke="#D5E4D8" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Hanging Tea Lantern (茶席暖簾提燈) -->
+  <g transform="translate(140, 45)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#5D473C" stroke-width="2"/>
+    <rect x="-16" y="40" width="32" height="6" rx="2" fill="#3D2B24"/>
+    <rect x="-22" y="46" width="44" height="60" rx="10" fill="url(#lanternGlow)" stroke="#D5A454" stroke-width="1.5" filter="url(#softContactShadow)"/>
+    <!-- Lantern ribs -->
+    <line x1="-10" y1="46" x2="-10" y2="106" stroke="#E5BA6C" stroke-width="1"/>
+    <line x1="10" y1="46" x2="10" y2="106" stroke="#E5BA6C" stroke-width="1"/>
+    <!-- Chinese character '茶' in lantern -->
+    <text x="0" y="82" font-family="'Noto Sans TC', sans-serif" font-size="18" font-weight="bold" fill="#8F5712" text-anchor="middle">茶</text>
+    <rect x="-16" y="106" width="32" height="5" rx="2" fill="#3D2B24"/>
+    <!-- Tassel -->
+    <line x1="0" y1="111" x2="0" y2="135" stroke="#C8872B" stroke-width="2"/>
+    <circle cx="0" cy="138" r="3" fill="#C8872B"/>
+  </g>
+
+  <!-- Two Cups of Warm Tea (一席好茶・敬候佳賓) -->
+  <g transform="translate(350, 180)" filter="url(#softContactShadow)">
+    <!-- Wooden Tray -->
+    <rect x="-100" y="70" width="220" height="40" rx="8" fill="#5F473B"/>
+    <rect x="-95" y="72" width="210" height="8" rx="3" fill="#755B4D" opacity="0.6"/>
+
+    <!-- Left Cup -->
+    <ellipse cx="-40" cy="70" rx="30" ry="8" fill="#000000" opacity="0.25"/>
+    <path d="M-65,40 C-65,65 -50,70 -40,70 C-30,70 -15,65 -15,40 Z" fill="#F8FBF8" stroke="#D3E0D3" stroke-width="1"/>
+    <ellipse cx="-40" cy="40" rx="25" ry="8" fill="#C8872B"/>
+    <ellipse cx="-44" cy="39" rx="15" ry="4" fill="#FFDF99" opacity="0.5"/>
+
+    <!-- Left Cup Steam -->
+    <path d="M-40,30 Q-46,15 -38,0" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M-32,28 Q-26,12 -33,-4" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+    <!-- Right Cup -->
+    <ellipse cx="40" cy="70" rx="30" ry="8" fill="#000000" opacity="0.25"/>
+    <path d="M15,40 C15,65 30,70 40,70 C50,70 65,65 65,40 Z" fill="#F8FBF8" stroke="#D3E0D3" stroke-width="1"/>
+    <ellipse cx="40" cy="40" rx="25" ry="8" fill="#C8872B"/>
+    <ellipse cx="36" cy="39" rx="15" ry="4" fill="#FFDF99" opacity="0.5"/>
+
+    <!-- Right Cup Steam -->
+    <path d="M40,30 Q34,15 42,0" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M48,28 Q54,12 47,-4" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+    <!-- Center Oolong Tea Leaves on tray -->
+    <g transform="translate(-2, 60) rotate(15)">
+      <path d="M0,0 Q8,-5 16,0 Q8,5 0,0 Z" fill="#2E6B45"/>
+    </g>
+    <g transform="translate(6, 64) rotate(-25)">
+      <path d="M0,0 Q6,-4 12,0 Q6,4 0,0 Z" fill="#3D7D54"/>
+    </g>
+  </g>
+
+  <!-- Warm Welcome Slogan in SVG badge -->
+  <g transform="translate(140, 230)">
+    <rect x="-10" y="0" width="140" height="34" rx="17" fill="#163B27"/>
+    <text x="60" y="22" font-family="'Noto Sans TC', sans-serif" font-size="13" font-weight="bold" fill="#F6FBF5" text-anchor="middle" letter-spacing="1.5">靜候入座品茗</text>
+  </g>
+</svg>

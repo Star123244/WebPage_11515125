@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFEFC"/>
+      <stop offset="100%" stop-color="#EDF4EC"/>
+    </linearGradient>
+    <linearGradient id="windowView" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D9ECD9"/>
+      <stop offset="100%" stop-color="#BAD7B8"/>
+    </linearGradient>
+    <linearGradient id="woodTable" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#553F33"/>
+      <stop offset="40%" stop-color="#6F5445"/>
+      <stop offset="100%" stop-color="#4E3A2E"/>
+    </linearGradient>
+    <filter id="tableShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#163B27" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Tea Room Interior Wall -->
+  <rect width="600" height="400" rx="16" fill="url(#wallGrad)"/>
+
+  <!-- Zen Round Moon Window (圓窗造景) -->
+  <g transform="translate(300, 155)">
+    <!-- Outer wooden window frame -->
+    <circle cx="0" cy="0" r="105" fill="#4B3A31"/>
+    <circle cx="0" cy="0" r="97" fill="#E8F2E7"/>
+    <!-- View outside window: bamboo & mountain silhouettes -->
+    <circle cx="0" cy="0" r="95" fill="url(#windowView)"/>
+    <!-- Distant hills -->
+    <path d="M-95,40 Q-40,-10 0,20 Q50,-20 95,30 L95,95 L-95,95 Z" fill="#9CBF9B" opacity="0.8"/>
+    <!-- Bamboo stalks outside -->
+    <g stroke="#3D6846" stroke-linecap="round" fill="none">
+      <line x1="-50" y1="-80" x2="-48" y2="90" stroke-width="4"/>
+      <line x1="-30" y1="-90" x2="-28" y2="92" stroke-width="3"/>
+      <line x1="55" y1="-70" x2="52" y2="90" stroke-width="4.5"/>
+    </g>
+    <!-- Bamboo leaves outside -->
+    <g fill="#2D5A36" opacity="0.9">
+      <path d="M-48,-40 Q-25,-55 -15,-45 Q-30,-35 -48,-40 Z"/>
+      <path d="M-48,-30 Q-20,-35 -10,-25 Q-28,-20 -48,-30 Z"/>
+      <path d="M-28,0 Q-5,-10 5,0 Q-10,10 -28,0 Z"/>
+      <path d="M52,-30 Q25,-40 18,-30 Q35,-20 52,-30 Z"/>
+      <path d="M52,-15 Q30,-15 22,-5 Q40,0 52,-15 Z"/>
+    </g>
+    <!-- Window wooden lattices -->
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#5D473C" stroke-width="3"/>
+    <line x1="0" y1="-95" x2="0" y2="95" stroke="#5D473C" stroke-width="2"/>
+    <line x1="-95" y1="0" x2="95" y2="0" stroke="#5D473C" stroke-width="2"/>
+  </g>
+
+  <!-- Wooden Floor Line -->
+  <rect x="0" y="340" width="600" height="60" fill="#E5DDD0"/>
+  <line x1="0" y1="340" x2="600" y2="340" stroke="#C9BCAC" stroke-width="2"/>
+
+  <!-- Solid Wood Tea Table (茶席原木大茶桌) -->
+  <g filter="url(#tableShadow)">
+    <rect x="70" y="295" width="460" height="25" rx="5" fill="url(#woodTable)"/>
+    <!-- Table legs -->
+    <rect x="110" y="320" width="22" height="40" fill="#3E2C22"/>
+    <rect x="468" y="320" width="22" height="40" fill="#3E2C22"/>
+  </g>
+
+  <!-- Tea Mat & Tea Set (茶具與茶席擺設) -->
+  <rect x="150" y="290" width="300" height="8" rx="2" fill="#D3C7B5" stroke="#B8A994" stroke-width="1"/>
+
+  <!-- Single Flower Vase (禪風小花插) -->
+  <g transform="translate(180, 250)">
+    <ellipse cx="10" cy="42" rx="12" ry="5" fill="#000000" opacity="0.2"/>
+    <path d="M4,42 L7,20 Q10,12 13,20 L16,42 Z" fill="#7D9387"/>
+    <!-- Slender branch & wild tea flower -->
+    <path d="M10,15 Q15,0 22,-10" stroke="#4C382C" stroke-width="2" fill="none"/>
+    <circle cx="22" cy="-10" r="4" fill="#FFFFFF"/>
+    <circle cx="22" cy="-10" r="1.5" fill="#E5A93C"/>
+  </g>
+
+  <!-- Purple Clay Pot (紫砂壺) -->
+  <g transform="translate(280, 265)">
+    <ellipse cx="25" cy="27" rx="28" ry="6" fill="#000000" opacity="0.2"/>
+    <ellipse cx="25" cy="16" rx="24" ry="14" fill="#5A433A"/>
+    <ellipse cx="25" cy="4" rx="14" ry="4" fill="#433028"/>
+    <circle cx="25" cy="-1" r="3" fill="#6A5046"/>
+    <path d="M6,10 C-3,10 -3,22 6,24" stroke="#433028" stroke-width="4" fill="none"/>
+    <path d="M44,14 C52,12 56,6 59,2" stroke="#5A433A" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- White Porcelain Teacup with Amber Tea (品茗杯) -->
+  <g transform="translate(370, 275)">
+    <ellipse cx="14" cy="18" rx="16" ry="4" fill="#000000" opacity="0.2"/>
+    <path d="M2,8 C2,20 8,22 14,22 C20,22 26,20 26,8 Z" fill="#FFFFFF" stroke="#D3DFD3" stroke-width="0.8"/>
+    <ellipse cx="14" cy="8" rx="12" ry="4" fill="#C8872B"/>
+    <!-- Steam -->
+    <path d="M14,4 Q11,-8 16,-16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+</svg>

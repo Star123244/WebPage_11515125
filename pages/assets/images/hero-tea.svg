@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF6EC"/>
+      <stop offset="100%" stop-color="#E2EFE0"/>
+    </linearGradient>
+    <linearGradient id="mistGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="teaSoupGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3C363"/>
+      <stop offset="60%" stop-color="#C8872B"/>
+      <stop offset="100%" stop-color="#8F5712"/>
+    </linearGradient>
+    <linearGradient id="potGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5C453C"/>
+      <stop offset="50%" stop-color="#46332C"/>
+      <stop offset="100%" stop-color="#2D1F1A"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E8D52"/>
+      <stop offset="100%" stop-color="#1E4D34"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#163B27" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="450" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Distant Tea Mountains -->
+  <path d="M0,260 Q120,170 240,210 T480,180 T600,220 L600,450 L0,450 Z" fill="#D3E6D2" opacity="0.6"/>
+  <path d="M0,290 Q150,220 310,250 T600,240 L600,450 L0,450 Z" fill="#B7D5B6" opacity="0.7"/>
+  <path d="M-20,330 Q160,270 340,300 T620,290 L620,450 L-20,450 Z" fill="#88B289" opacity="0.5"/>
+
+  <!-- Soft Mist Layers -->
+  <ellipse cx="200" cy="270" rx="220" ry="40" fill="url(#mistGrad)"/>
+  <ellipse cx="440" cy="300" rx="180" ry="35" fill="url(#mistGrad)"/>
+
+  <!-- Wooden Tea Table Surface -->
+  <path d="M40,380 L560,380 Q570,380 570,390 L560,425 Q555,432 545,432 L55,432 Q45,432 40,425 L30,390 Q30,380 40,380 Z" fill="#695145" filter="url(#shadow)"/>
+  <rect x="42" y="382" width="516" height="6" rx="3" fill="#806558" opacity="0.5"/>
+  <ellipse cx="300" cy="385" rx="240" ry="25" fill="#163B27" opacity="0.08"/>
+
+  <!-- Bamboo / Stone Tea Mat -->
+  <rect x="80" y="360" width="440" height="40" rx="6" fill="#D8CFBF" stroke="#B8AC97" stroke-width="1.5"/>
+  <line x1="120" y1="360" x2="120" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="160" y1="360" x2="160" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="200" y1="360" x2="200" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="240" y1="360" x2="240" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="280" y1="360" x2="280" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="320" y1="360" x2="320" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="360" y1="360" x2="360" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="400" y1="360" x2="400" y2="400" stroke="#B8AC97" stroke-width="1"/>
+  <line x1="440" y1="360" x2="440" y2="400" stroke="#B8AC97" stroke-width="1"/>
+
+  <!-- Purple Clay Teapot (紫砂壺) -->
+  <g filter="url(#shadow)">
+    <!-- Teapot Body Shadow -->
+    <ellipse cx="230" cy="365" rx="75" ry="14" fill="#000000" opacity="0.25"/>
+
+    <!-- Teapot Handle -->
+    <path d="M165,305 C130,305 130,345 160,350" fill="none" stroke="#46332C" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Teapot Body -->
+    <ellipse cx="230" cy="325" rx="72" ry="42" fill="url(#potGrad)"/>
+
+    <!-- Teapot Base Ring -->
+    <ellipse cx="230" cy="358" rx="45" ry="7" fill="#3A2822"/>
+
+    <!-- Teapot Spout -->
+    <path d="M285,320 C315,315 330,290 338,275 C334,272 328,270 322,274 C310,290 292,305 275,310 Z" fill="#46332C"/>
+
+    <!-- Teapot Lid & Knob -->
+    <ellipse cx="230" cy="286" rx="44" ry="10" fill="#3D2B24"/>
+    <ellipse cx="230" cy="282" rx="38" ry="8" fill="#5C453C"/>
+    <circle cx="230" cy="268" r="8" fill="#5C453C"/>
+    <ellipse cx="230" cy="267" rx="7" ry="5" fill="#72574C"/>
+  </g>
+
+  <!-- Tea Stream (茶湯傾注) -->
+  <path d="M334,276 Q350,300 375,328 Q385,340 388,348" fill="none" stroke="url(#teaSoupGrad)" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="388" cy="348" r="3" fill="#F3C363"/>
+
+  <!-- White Porcelain Teacup (白瓷品茗杯) -->
+  <g filter="url(#shadow)">
+    <!-- Cup Shadow -->
+    <ellipse cx="400" cy="372" rx="36" ry="9" fill="#000000" opacity="0.2"/>
+
+    <!-- Outer Cup -->
+    <path d="M365,340 C365,370 380,374 400,374 C420,374 435,370 435,340 Z" fill="#FBFDFB" stroke="#E2ECE2" stroke-width="1"/>
+    <!-- Cup Rim & Interior -->
+    <ellipse cx="400" cy="340" rx="35" ry="12" fill="#E8F1E8"/>
+    <!-- Amber Tea Soup in Cup -->
+    <ellipse cx="400" cy="342" rx="32" ry="10" fill="url(#teaSoupGrad)"/>
+    <ellipse cx="395" cy="340" rx="20" ry="5" fill="#FFF2D6" opacity="0.4"/>
+  </g>
+
+  <!-- Aromatic Steam (縷縷茶香蒸氣) -->
+  <path d="M398,325 Q390,305 402,285 T395,250" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M410,320 Q418,295 412,275 T420,240" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+  <path d="M230,255 Q225,230 238,210 T228,180" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Fresh Oolong Tea Leaves Floating (茶葉點綴) -->
+  <g transform="translate(140, 220) rotate(-15)">
+    <path d="M0,0 Q18,-12 36,0 Q18,12 0,0 Z" fill="url(#leafGrad)"/>
+    <line x1="2" y1="0" x2="34" y2="0" stroke="#71AB76" stroke-width="1"/>
+  </g>
+  <g transform="translate(470, 260) rotate(25)">
+    <path d="M0,0 Q14,-8 28,0 Q14,8 0,0 Z" fill="url(#leafGrad)"/>
+    <line x1="2" y1="0" x2="26" y2="0" stroke="#71AB76" stroke-width="0.8"/>
+  </g>
+  <g transform="translate(100, 310) rotate(40)">
+    <path d="M0,0 Q12,-6 22,0 Q12,6 0,0 Z" fill="url(#leafGrad)" opacity="0.85"/>
+  </g>
+</svg>
