@@ -14,7 +14,9 @@
   /* 背景色彩系統 */
   --color-bg-main: #F6FBF5;        /* 淺綠霧白（主背景） */
   --color-bg-alt: #EEF6EC;         /* 交錯區塊背景 */
-  --color-bg-card: #FFFFFF;        /* 卡片白底 */
+  --color-bg-card: #FFFFFF;        /* 卡片純白基底色 */
+  --bg-card-gradient: linear-gradient(180deg, #FFFFFF 0%, #F0F7EF 100%); /* 淡綠色和純白漸層卡片底色 */
+  --bg-card-hover: linear-gradient(180deg, #FFFFFF 0%, #E6F2E5 100%);   /* Hover 懸停漸層加深 */
   
   /* 文字色彩系統 */
   --color-text-dark: #163B27;      /* 深墨綠標題文字 */
@@ -340,12 +342,13 @@ ul, ol {
 }
 
 .card {
+  background: var(--bg-card-gradient);
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border-card);
   border-radius: var(--border-radius-card);
   padding: 36px 28px;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   display: flex;
   flex-direction: column;
 }
@@ -354,6 +357,7 @@ ul, ol {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-border);
+  background: var(--bg-card-hover);
 }
 
 .card-icon {
@@ -502,6 +506,7 @@ ul, ol {
 }
 
 .info-card {
+  background: var(--bg-card-gradient);
   background-color: var(--color-bg-card);
   border-radius: var(--border-radius-card);
   border: 1px solid var(--color-border-card);
